@@ -1,0 +1,187 @@
+body{
+    margin:0;
+    background-color: rgba(26, 26, 26);
+    font-family: "Lexend" , sans-serif; 
+    overflow-x: hidden;
+}
+
+.content{
+    /* max-width: auto;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto; */
+}
+
+p{
+    color: white;
+} 
+
+h{
+    font-size: 8vmin;  
+    color: white;
+    text-align: center;
+}
+
+h2{
+    font-size: 3vmin;  
+    color: white;
+    text-align: center;
+}
+
+.hbox{
+    text-align: center; 
+    padding-top: 8%;  
+    padding-bottom: 2%;
+}
+
+.outer-navbar{
+    background-color: #1a1a1a; 
+    width: auto;  
+    height: 10vh; 
+    justify-content: center;
+    align-items: center; 
+    position: -webkit-sticky; /* Safari */
+    position: sticky; 
+    top: 0;
+    z-index: 1000; /* Ensure it stays above other content */ 
+}
+
+.navbar{
+    background-color: #1a1a1a; 
+    width:  70%;  
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+#surfacelvl-nav{
+    width: 20%; 
+    margin-right: auto;
+    padding-right: auto;
+    margin-top: auto;
+    margin-left: auto;
+    margin-bottom: auto; 
+    float: left;
+}  
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-evenly; 
+    width: 100%; 
+    margin-left: 5%; 
+    float:right; 
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.navigation-buttons a {
+    background-color: black; /* Adjust button background color */ 
+    color: white; /* Adjust button text color */  
+
+    height: fit-content;
+
+    display: flex;
+    text-align: center;
+    text-wrap:nowrap;
+    justify-content: center;
+    
+    font-size: 1.5vmin;
+    font-family: "Press Start 2P" , sans-serif; 
+    text-decoration: none;
+
+    border: 1px solid white; /* Adjust button border */ 
+    border-radius: 4px;
+    width: 100%;
+    margin-left: 1vmin;
+    margin-right: 1vmin;
+    --padding: 2vmin;
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+
+    cursor: pointer;  
+    transition: background-color 0.3s, color 0.3s;
+} 
+
+.navigation-buttons a:hover {
+    background-color: #f7c223; /* Adjust button background color */  
+    color: black; /* Adjust button text color */
+} 
+
+.content-region{
+    width: auto;
+    display: block;
+    align-content: center; 
+}
+.inner-content-region{
+    width: 50%;
+    min-width: 90vmin; 
+    margin: 0 auto;
+}
+
+#companylogo{
+    width: 60%; 
+    margin-right: auto; 
+    margin-left: auto;
+}
+
+.shoutout{
+    margin: 0;
+    font-family: "Honk" , sans-serif; 
+    color: white;
+    font-size:3vw;
+    text-align: center;
+}
+
+#showreel{ 
+    width: 60%;
+    min-width: 90vmin;
+    height: 90%;  
+    margin: 0 auto;
+    display: block;
+} 
+
+.game-banner-left{
+    background-color: rgb(26, 26, 26);
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1%;  
+    padding-left: 3%; 
+    padding-right: 3%;
+    margin-top: 2%;
+}
+
+.game-banner-right{
+    background-color: rgb(26, 26, 26);
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1%; 
+    padding-right: 4%;
+    margin-top: 2%;
+}
+
+.topbanner{
+    width: 100vw;     
+    justify-content: center;
+    align-items: center; 
+    position: -webkit-sticky;
+    position: fixed; 
+    top: 0;
+    z-index: 1000;
+}
+
+.bottombanner{
+    width: 100vw;     
+    justify-content: center;
+    align-items: center; 
+    position: -webkit-sticky;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+} 

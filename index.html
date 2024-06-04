@@ -1,10 +1,108 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <Title>Caolán DL Portfolio</Title>
-    </head>
-    <body>
-        <h1>Work In Progress</h1>
-        <p>Please come back later ;)</p>
-    </body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SurfaceLvL</title>
+    <link rel="stylesheet" href="style.css"> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nabla&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Honk&display=swap" rel="stylesheet">
+
+</head>
+
+<body>   
+    <div class="content">
+        <div class = "outer-navbar">
+            <div class = "navbar">  
+                <img id = "surfacelvl-nav" src = "public/Logo_DarkTransparentHR.png"> 
+                <div class="navigation-buttons"> 
+                    <a href="#showreel-section">Showreel</a>  
+                    <a href="#aboutus-section">About Us</a>
+                    <a href="#games-section">Games</a>
+                    <a>Contact</a>
+                </div> 
+            </div>
+        </div>  
+
+        <div  id="showreel-section"  class = "content-region" style="background-color: rgb(0, 0, 0); padding-top: 2vmax; padding-block-end: 2vmax;"> 
+            <div class = "inner-content-region" style="width: 80%;"> 
+                <!-- <img id = "companylogo" src = "public/Logo_DarkTransparentHR.png">  -->
+                <p class = "shoutout" style="text-align: centre;"> 
+                    Independent Games Developer in East England
+                </p> 
+            </div>
+        </div>
+
+
+        <div class = "content-region" style="background-color: rgb(34, 34, 34); height: 72vmin; align-content: center;">  
+            <iframe id="showreel" src="https://www.youtube.com/embed/loxtDLPl2I4" frameborder="0"></iframe>  
+        </div> 
+
+        <div id = "aboutus-section" class = "content-region" style="background-color: rgb(20, 20, 20); height: fit-content; padding-bottom: 3%;">   
+            <div class = "inner-content-region"> 
+                <div class = "hbox"><h>ABOUT US</h></div>
+                <p style="font-size: 2.6vmin; color: #bebebe; text-align: center;">
+                We are SurfaceLvL Games; an Independent games developer based in the UK, currently focused on 
+                <span style="color:rgb(255, 223, 40)">simulation</span>, 
+                <span style="color:rgb(255, 85, 85)">automation</span>, 
+                and <span style="color:rgb(55, 182, 255)">educational</span> games. 
+                We are invested in bringing novel new ideas to the automation game genre, 
+                and aim to provide its fans with new environments, mechanics, and gameplay modalities to explore. 
+                Our long term goal is to develop 
+                <span style="color:#ffffff">Moon</span><span style="color:#809db4">Factory: </span>
+                <span style="color:rgb(55, 182, 255)">Edu</span>
+                , an education coding platform built on the 
+                <span style="color:#ffffff">Moon</span><span style="color:#809db4; padding: 0%;">Factory</span>
+                game architecture, 
+                and featuring its own novel interpereted procedural programming language titled
+                <span style="color:#34bcf1">&lt;RoverScript&gt;</span>.
+                </p> 
+            </div>
+        </div> 
+
+        <div id ="games-section" style="background-color: #292929; height: auto;">
+            <div class = "inner-content-region">
+                <div class = "hbox"><h>OUR GAMES</h></div>  
+                <div class = "content-region" style="height: 50%;">
+                    <div class="game-banner-left">
+                        <a href="steamstore.html" style="display: block"><img src="public/MF.png" style="width: 20vw;"></a>    
+                        <p style="font-size: 1.8vmin; color: #e4e4e4;"> Earth’s resources are depleted... to the MOON <br><br> Take the role of a lunar satellite operator, and command an army of lunar rovers to construct a factory on the moon. 
+                            Analyse research samples, unlock advanced machinery, construct your factory, and launch resources back to 
+                            Earth to reignite industry and save civilisation as we know it!</p>
+                    </div> 
+                    <a href="steamstore.html" style="display: block"><img src="public/Banner.png" style="width: 100%; height: auto;"></a>
+                    <a href="steamstore.html" style="display: block; width: 20%; margin-left: auto; margin-right: auto;"><img src="public/steamlink.png" style="width: 100%;"></a>
+                    
+                    <div class="game-banner-right">
+                        <p style="text-align: right; font-size: 1.8vmin; color: #e4e4e4; padding-left: 2%;"> M
+                            oonFactory Edu is the planned educational expansion for MoonFactory, 
+                            that will bring &lt;RoverScript&gt;; A python-like scripting language that can 
+                            be used to program MoonFactory Edu's rovers, and teaches kids how to code. </p>
+                        <img src="public/MFEdu.png" style="width: 20vw; padding-left: 2%;">
+                    </div>
+                    <img src="public/Unkown.png" style="width: 100%; margin-bottom: 3%;"> 
+                </div> 
+            </div>  
+        </div>    
+
+        <div id = "contact-section" class = "content-region" style="background-color: rgb(10, 10, 10); height: fit-content;">
+            <div class="inner-content-region">
+                <div class = "hbox"><h>CONTACT US!</h></div>   
+                <h2 style="padding-bottom: 10%;"><a href ="mailto: contact@surfacelvl.net">contact@surfacelvl.net</a></h2>
+            </div> 
+        </div>
+
+        <div class = "content-region" style="background-color: #292929; height: 10vmin;">
+            <p style="text-align:center; margin-top: 0 auto;"> 
+                ©SurfaceLvL 2024
+            </p>
+        </div>
+    </div>
+</body>
+
 </html>
