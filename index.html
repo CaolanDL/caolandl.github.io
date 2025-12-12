@@ -13,8 +13,10 @@
   </head>
   <body>
     <div id="container">
-      <!--------------- YOUR NAME OVER HERE -------------->
-      <h2 class="header">{{ site.full_name }}</h2>
+      <!--------------- YOUR COMPANY LOGO -------------->
+      <div class="header">
+        <img src="assets/CD.png" alt="{{ site.full_name }} logo" class="site-logo">
+      </div>
       <div id="gallery">
       </div>
     </div>
@@ -44,13 +46,13 @@
     var rows = ROWS;
     var squares = SQUARES;
 
-    var layoutStyle = {{ site.layout_style }};
+    var layoutStyle = "{{ site.layout_style }}";
 
     var configuration = {
-      spacing: {{ site.spacing }},
-      shuffle: {{ site.shuffle }},
-      columns: {{ site.columns }},
-      maxHeight: {{ site.max_height }}
+      spacing: "{{ site.spacing }}",
+      shuffle: "{{ site.shuffle }}",
+      columns: "{{ site.columns }}",
+      maxHeight: "{{ site.max_height }}"
     };
   </script>
   <script src="js/script.js"></script>
