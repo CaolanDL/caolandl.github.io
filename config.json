@@ -109,14 +109,6 @@
   ],
   "Portraits": [
     {
-      "width": 1000,
-      "height": 1000,
-      "path": "./photos/Portraits/036-4e960b.jpg",
-      "compressed_path": "./photos/Portraits/036-4e960b.min.jpg",
-      "compressed": false,
-      "placeholder_path": "./photos/Portraits/036-4e960b.placeholder.jpg"
-    },
-    {
       "width": 664,
       "height": 1000,
       "path": "./photos/Portraits/140241020016.jpg",
@@ -147,6 +139,16 @@
       "compressed_path": "./photos/Portraits/DSCF4495.min.jpg",
       "compressed": false,
       "placeholder_path": "./photos/Portraits/DSCF4495.placeholder.jpg"
+    }
+  ],
+  "Still Life": [
+    {
+      "width": 1000,
+      "height": 1000,
+      "path": "./photos/Still Life/036-4e960b.jpg",
+      "compressed_path": "./photos/Still Life/036-4e960b.min.jpg",
+      "compressed": false,
+      "placeholder_path": "./photos/Still Life/036-4e960b.placeholder.jpg"
     }
   ]
 }
