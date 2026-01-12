@@ -77,29 +77,47 @@ body.has-contact-banner {
 
 .contacts-bar {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   margin-bottom: 48px;
-  max-width: 300px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   background: transparent;
+  gap: 0;
+  width: 100%;
+  position: relative;
 }
 
 .contacts-bar__link {
-  color: #666;
+  color: #000;
   text-decoration: none;
-  font-size: 18px;
-  transition: 0.2s color;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
+  font-size: 16px;
+  transition: 0.2s opacity;
+  display: inline-block;
+  font-weight: 400;
+  white-space: nowrap;
+  flex-shrink: 0;
+  position: absolute;
+}
+
+.contacts-bar__link:nth-child(1) {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.contacts-bar__link:nth-child(2) {
+  left: 25%;
+  transform: translateX(-50%);
+}
+
+.contacts-bar__link:nth-child(3) {
+  left: 75%;
+  transform: translateX(-50%);
 }
 
 .contacts-bar__link:hover {
-  color: #333;
+  opacity: 0.7;
 }
 
 section {
