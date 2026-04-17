@@ -3,10 +3,10 @@
 #############################
 
 # The title that appears on the tab
-title: CDL Studio Portfolio
+title: ~ CSTUDIO >
 
 # The title on the web page
-full_name: CDL Studio
+full_name: CSTUDIO
 
 # The type of layout
 # Options: ROWS, SQUARES, COLUMNS
@@ -16,10 +16,10 @@ layout_style: COLUMNS
 # not remove the property.
 
 # Integer: Spacing between each photo
-spacing: 20
+spacing: 10
 
 # Boolean(true|false): Shuffle the photos in the album
-shuffle: false
+shuffle: true
 
 # Integer: Number of columns for square or columns
 columns: 3
@@ -28,19 +28,19 @@ columns: 3
 max_height: 650
 
 # Handle
-instagram: cdl_studi0
+instagram: caolan.photo
 
 # Name of your gallery (this will show up at the top of your page and in the RSS feed)
-name: Gallery
+name: CSTUDIO GALLERY
 
 # Short description (goes below the title; it will also be used in the RSS feed)
-description: Photography Portfolio
+description: HIGHLIGHT PHOTOGRAPHY
 
 # Your name, as you want it to appear underneath each post and in the footer
-author: Andy Zhang
+author: Caolán
 
 # Your email if you want it to be linked on the contact page
-author_email: CaolanDL@outlook.com
+author_email: CSTUDIO@GMAIL.COM
 
 # The directory for category index pages. Change it to something else if
 # for example you want links like /categories/category1 instead of /category1

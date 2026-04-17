@@ -14,6 +14,14 @@ class Config {
   photos(album) {
     return this.data[album];
   }
+
+  allPhotos() {
+    var photos = [];
+    for (var album in this.data) {
+      photos = photos.concat(this.data[album]);
+    }
+    return photos;
+  }
 }
 
 /**
@@ -75,12 +83,10 @@ class Renderer {
  */
 class VerticalRenderer extends Renderer {
   render(config) {
-    for (var section in config.data) {
-      var section = this.createSection(config,
-        section,
-        this.getPhotos(config, config.photos(section)));
-      this.rootElem().appendChild(section);
-    }
+    var section = this.createSection(config,
+      'gallery',
+      this.getPhotos(config, config.allPhotos()));
+    this.rootElem().appendChild(section);
   }
 
   /**
@@ -160,12 +166,10 @@ class VerticalRenderer extends Renderer {
  */
 class SquareRenderer extends Renderer {
   render(config) {
-    for (var section in config.data) {
-      var section = this.createSection(config,
-        section,
-        this.getPhotos(config, config.photos(section)));
-      this.rootElem().appendChild(section);
-    }
+    var section = this.createSection(config,
+      'gallery',
+      this.getPhotos(config, config.allPhotos()));
+    this.rootElem().appendChild(section);
   }
 
   /**
@@ -247,12 +251,10 @@ class SquareRenderer extends Renderer {
  */
 class HorizontalRenderer extends Renderer {
   render(config) {
-    for (var section in config.data) {
-      var section = this.createSection(config,
-        section,
-        this.getPhotos(config, config.photos(section)));
-      this.rootElem().appendChild(section);
-    }
+    var section = this.createSection(config,
+      'gallery',
+      this.getPhotos(config, config.allPhotos()));
+    this.rootElem().appendChild(section);
   }
 
   /**
