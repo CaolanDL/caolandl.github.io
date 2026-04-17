@@ -43,9 +43,6 @@ class Renderer {
   createHeader(title) {
     var sectionElem = document.createElement('section');
     sectionElem.id = title;
-    var header = document.createElement('h3');
-    header.innerHTML = title;
-    sectionElem.appendChild(header);
     return sectionElem;
   }
 

@@ -10,7 +10,7 @@ full_name: CDL Studio
 
 # The type of layout
 # Options: ROWS, SQUARES, COLUMNS
-layout_style: ROWS
+layout_style: COLUMNS
 
 # Variables below are default. Feel free to customize the values below, but do
 # not remove the property.
@@ -25,7 +25,7 @@ shuffle: false
 columns: 3
 
 # Integer: Max height for rows
-max_height: 500
+max_height: 650
 
 # Handle
 instagram: cdl_studi0
