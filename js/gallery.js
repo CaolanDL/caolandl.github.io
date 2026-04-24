@@ -9,6 +9,7 @@ class Config {
     this.spacing = opts.spacing || 10;
     this.shuffle = opts.shuffle || false;
     this.columns = opts.columns || 3;
+    this.mobileBreakpoint = opts.mobileBreakpoint || 900;
   };
 
   sections() {
@@ -33,6 +34,14 @@ class Config {
       photos = photos.concat(sections[i].photos);
     }
     return photos;
+  }
+
+  isMobile() {
+    return window.innerWidth <= this.mobileBreakpoint;
+  }
+
+  effectiveColumns() {
+    return this.isMobile() ? 1 : this.columns;
   }
 }
 
@@ -112,14 +121,14 @@ class VerticalRenderer extends Renderer {
    */
   createSection(config, section, photos) {
     var sectionElem = this.createHeader(section);
-    var length = config.columns
-    var width = (this._currentWidth - config.spacing * (config.columns-1)) * 1.0 / config.columns;
+    var columns = config.effectiveColumns();
+    var width = (this._currentWidth - config.spacing * (columns-1)) * 1.0 / columns;
 
     var stacks = [];
-    for (var i = 0; i < config.columns; i++) {
+    for (var i = 0; i < columns; i++) {
       stacks.push([]);
     }
-    var heights = new Array(config.columns).fill(0);
+    var heights = new Array(columns).fill(0);
 
 
     for (var i = 0; i < photos.length; i++) {
@@ -130,7 +139,7 @@ class VerticalRenderer extends Renderer {
     }
 
     var columnElements = document.createElement('div');
-    columnElements.style.columnCount = config.columns;
+    columnElements.style.columnCount = columns;
     columnElements.style.columnGap = px(config.spacing);
 
     for (var i = 0; i < stacks.length; i++) {
@@ -203,7 +212,7 @@ class SquareRenderer extends Renderer {
 
     // In column format, we want to precompute the height of each cell, so that
     // the last row can have a matching width and align itself to rows above.
-    var length = config.columns ||
+    var length = config.effectiveColumns() ||
       Math.ceil((this._currentWidth + config.spacing) / (config.maxHeight + config.spacing));
     var height = this.calculateHeight(config, length);
 
@@ -262,8 +271,9 @@ class SquareRenderer extends Renderer {
    * Calculates the height of the square photos
    */
   calculateHeight(config, length) {
-    if (config.columns) {
-      return (this._currentWidth - (config.columns-1) * config.spacing) / config.columns;
+    var columns = config.effectiveColumns();
+    if (columns) {
+      return (this._currentWidth - (columns-1) * config.spacing) / columns;
     }
     return (this._currentWidth - (length-1) * config.spacing) / length;
   }
