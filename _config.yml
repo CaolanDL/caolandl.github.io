@@ -19,7 +19,7 @@ layout_style: COLUMNS
 spacing: 14
 
 # Boolean(true|false): Shuffle the photos in the gallery
-shuffle: true
+shuffle: false
 
 # Integer: Number of columns for square or columns
 columns: 3
