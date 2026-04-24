@@ -1,21 +1,33 @@
 var id = 'gallery';
+var galleryConfig = null;
 
-function reqListener() {
-  var renderer
+function createRenderer() {
   switch (layoutStyle) {
     case COLUMNS:
-      renderer = new VerticalRenderer(id);
-      break;
+      return new VerticalRenderer(id);
     case ROWS:
-      renderer = new HorizontalRenderer(id);
-      break;
+      return new HorizontalRenderer(id);
     case SQUARES:
-      renderer = new SquareRenderer(id);
-      break;
+      return new SquareRenderer(id);
   }
-  var config = new Config(JSON.parse(this.responseText), configuration);
-  renderer.render(config);
+}
+
+function renderGallery() {
+  if (!galleryConfig) {
+    return;
+  }
+
+  var galleryRoot = document.getElementById(id);
+  galleryRoot.innerHTML = '';
+
+  var renderer = createRenderer();
+  renderer.render(galleryConfig);
   lazyload();
+}
+
+function reqListener() {
+  galleryConfig = new Config(JSON.parse(this.responseText), configuration);
+  renderGallery();
 }
 
 
@@ -30,3 +42,6 @@ window.onload = function() {
     document.querySelector('div.footer').remove();
   }
 };
+
+window.addEventListener('resize', renderGallery);
+window.addEventListener('orientationchange', renderGallery);

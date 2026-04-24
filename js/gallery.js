@@ -41,6 +41,20 @@ class Config {
   }
 
   isMobileDevice() {
+    if (typeof window.matchMedia === 'function') {
+      if (window.matchMedia('(pointer: coarse)').matches) {
+        return true;
+      }
+
+      if (window.matchMedia('(hover: none)').matches) {
+        return true;
+      }
+    }
+
+    if (typeof navigator.maxTouchPoints === 'number' && navigator.maxTouchPoints > 0) {
+      return true;
+    }
+
     if (navigator.userAgentData && typeof navigator.userAgentData.mobile === 'boolean') {
       return navigator.userAgentData.mobile;
     }
