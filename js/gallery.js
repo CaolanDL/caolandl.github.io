@@ -37,11 +37,21 @@ class Config {
   }
 
   isMobile() {
-    return window.innerWidth <= this.mobileBreakpoint;
+    return window.innerWidth <= this.mobileBreakpoint || this.isMobileDevice();
+  }
+
+  isMobileDevice() {
+    if (navigator.userAgentData && typeof navigator.userAgentData.mobile === 'boolean') {
+      return navigator.userAgentData.mobile;
+    }
+
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile/i.test(
+      navigator.userAgent
+    );
   }
 
   effectiveColumns() {
-    return this.isMobile() ? 1 : this.columns;
+    return this.isMobile() ? 2 : this.columns;
   }
 }
 
