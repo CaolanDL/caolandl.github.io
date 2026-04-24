@@ -4,23 +4,35 @@
  */
 class Config {
   constructor(config, opts) {
-    this.data = Array.isArray(config) ? config : this.flattenGroupedPhotos(config);
+    this.data = config;
     this.maxHeight = opts.maxHeight || 400;
     this.spacing = opts.spacing || 10;
     this.shuffle = opts.shuffle || false;
     this.columns = opts.columns || 3;
   };
 
-  flattenGroupedPhotos(config) {
-    var photos = [];
-    for (var album in config) {
-      photos = photos.concat(config[album]);
+  sections() {
+    if (Array.isArray(this.data)) {
+      return [{ title: 'gallery', photos: this.data.slice() }];
     }
-    return photos;
+
+    var sections = [];
+    for (var album in this.data) {
+      sections.push({
+        title: album,
+        photos: this.data[album].slice()
+      });
+    }
+    return sections;
   }
 
   allPhotos() {
-    return this.data.slice();
+    var photos = [];
+    var sections = this.sections();
+    for (var i = 0; i < sections.length; i++) {
+      photos = photos.concat(sections[i].photos);
+    }
+    return photos;
   }
 }
 
@@ -51,6 +63,7 @@ class Renderer {
   createHeader(title) {
     var sectionElem = document.createElement('section');
     sectionElem.id = title;
+    sectionElem.className = 'gallery-section';
     return sectionElem;
   }
 
@@ -83,10 +96,15 @@ class Renderer {
  */
 class VerticalRenderer extends Renderer {
   render(config) {
-    var section = this.createSection(config,
-      'gallery',
-      this.getPhotos(config, config.allPhotos()));
-    this.rootElem().appendChild(section);
+    var sections = config.sections();
+    for (var i = 0; i < sections.length; i++) {
+      var section = this.createSection(
+        config,
+        sections[i].title,
+        this.getPhotos(config, sections[i].photos)
+      );
+      this.rootElem().appendChild(section);
+    }
   }
 
   /**
@@ -166,10 +184,15 @@ class VerticalRenderer extends Renderer {
  */
 class SquareRenderer extends Renderer {
   render(config) {
-    var section = this.createSection(config,
-      'gallery',
-      this.getPhotos(config, config.allPhotos()));
-    this.rootElem().appendChild(section);
+    var sections = config.sections();
+    for (var i = 0; i < sections.length; i++) {
+      var section = this.createSection(
+        config,
+        sections[i].title,
+        this.getPhotos(config, sections[i].photos)
+      );
+      this.rootElem().appendChild(section);
+    }
   }
 
   /**
@@ -251,10 +274,15 @@ class SquareRenderer extends Renderer {
  */
 class HorizontalRenderer extends Renderer {
   render(config) {
-    var section = this.createSection(config,
-      'gallery',
-      this.getPhotos(config, config.allPhotos()));
-    this.rootElem().appendChild(section);
+    var sections = config.sections();
+    for (var i = 0; i < sections.length; i++) {
+      var section = this.createSection(
+        config,
+        sections[i].title,
+        this.getPhotos(config, sections[i].photos)
+      );
+      this.rootElem().appendChild(section);
+    }
   }
 
   /**

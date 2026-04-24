@@ -43,28 +43,48 @@ def get_path(path, ext):
     return re.sub(r'\.(png|jpe?g)$', '.' + ext + '.\g<1>', path)
 
 
-def get_images():
+def get_directories():
+    items = os.listdir(PHOTO_PATH)
+    return sorted(list(filter(lambda x: os.path.isdir(os.path.join(PHOTO_PATH, x)), items)))
+
+
+def get_root_images():
     result = []
-    for root, _, items in os.walk(PHOTO_PATH):
+    items = os.listdir(PHOTO_PATH)
+    filtered_items = list(filter(is_original, items))
+    for img in filtered_items:
+        file_path = os.path.join(PHOTO_PATH, img)
+        result.append(get_image_metadata(file_path))
+    return result
+
+
+def get_images(category):
+    result = []
+    category_path = os.path.join(PHOTO_PATH, category)
+    for root, _, items in os.walk(category_path):
         filtered_items = list(filter(is_original, items))
         for img in filtered_items:
             file_path = os.path.join(root, img)
-            width, height = 0, 0
-            has_compressed = False
-            relative_path = './' + os.path.relpath(file_path, PATH).replace('\\', '/')
-            with open(file_path, 'rb') as f:
-                _, width, height = getImageInfo(f.read())
-            if os.path.isfile(get_min_path(relative_path)):
-                has_compressed = True
-            result.append({
-                'width': width,
-                'height': height,
-                'path': relative_path,
-                'compressed_path': get_min_path(relative_path),
-                'compressed': has_compressed,
-                'placeholder_path': get_placeholder_path(relative_path)
-            })
+            result.append(get_image_metadata(file_path))
     return result
+
+
+def get_image_metadata(file_path):
+    width, height = 0, 0
+    has_compressed = False
+    relative_path = './' + os.path.relpath(file_path, PATH).replace('\\', '/')
+    with open(file_path, 'rb') as f:
+        _, width, height = getImageInfo(f.read())
+    if os.path.isfile(get_min_path(relative_path)):
+        has_compressed = True
+    return {
+        'width': width,
+        'height': height,
+        'path': relative_path,
+        'compressed_path': get_min_path(relative_path),
+        'compressed': has_compressed,
+        'placeholder_path': get_placeholder_path(relative_path)
+    }
 
 
 def write_config(config):
@@ -73,9 +93,26 @@ def write_config(config):
 
 
 def run():
-    print('Starting to collect all photos within the /photos directory...')
-    config = get_images()
-    print('Found {length} photos'.format(length=len(config)))
+    print('Starting to collect all categories within the /photos directory...')
+    config = {}
+    dirs = get_directories()
+    print('Found {length} categories'.format(length=len(dirs)))
+    for i, path in enumerate(dirs):
+        print(str(i+1) + ': Processing photos for the category "{category}"'.format(
+            category=path))
+        config[path] = get_images(path)
+        print('   Done processing {l} photos for "{category}"\n'.format(
+            l=len(config[path]),
+            category=path))
+
+    root_images = get_root_images()
+    if len(root_images) > 0:
+        fallback_category = 'Uncategorized'
+        config[fallback_category] = root_images
+        print('Added {length} root-level photos to the "{category}" category'.format(
+            length=len(root_images),
+            category=fallback_category))
+
     print('Writing files to {path} now...'.format(path=PATH + 'config.json'))
     write_config(config)
     print('''Done writing! You may now safely close this window :)

@@ -125,6 +125,14 @@ section {
   margin-bottom: 128px;
 }
 
+.gallery-section {
+  margin-bottom: 32px;
+}
+
+.gallery-section:last-child {
+  margin-bottom: 0;
+}
+
 section img {
   vertical-align: middle;
   opacity: 0;
