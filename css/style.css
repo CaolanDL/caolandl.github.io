@@ -129,6 +129,15 @@ section {
   margin-bottom: 64px;
 }
 
+.gallery-section:not(:last-child)::after {
+  content: '';
+  display: block;
+  width: 80%;
+  height: 1px;
+  margin: 32px auto 0;
+  background: #333333;
+}
+
 .gallery-section:last-child {
   margin-bottom: 0;
 }
