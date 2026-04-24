@@ -126,7 +126,7 @@ section {
 }
 
 .gallery-section {
-  margin-bottom: 45px;
+  margin-bottom: 64px;
 }
 
 .gallery-section:last-child {
@@ -184,20 +184,35 @@ section img.img-loaded {
 
 @media (max-width: 900px) {
   #container {
+    width: calc(100% - 32px);
     flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
     gap: 40px;
   }
 
   .sidebar {
+    flex: none;
     flex-basis: auto;
     width: 100%;
+    max-width: none;
+    align-items: flex-start;
   }
 
   .header {
     margin-top: 48px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .contacts-bar,
+  .footer {
+    width: 100%;
+    text-align: left;
   }
 
   #gallery {
+    margin-left: 0;
     width: 100%;
   }
 }

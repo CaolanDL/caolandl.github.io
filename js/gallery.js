@@ -8,8 +8,7 @@ class Config {
     this.maxHeight = opts.maxHeight || 400;
     this.spacing = opts.spacing || 10;
     this.shuffle = opts.shuffle || false;
-    this.columns = opts.columns || 3;
-    this.mobileBreakpoint = opts.mobileBreakpoint || 900;
+    this.columns = opts.columns || 2;
   };
 
   sections() {
@@ -36,36 +35,8 @@ class Config {
     return photos;
   }
 
-  isMobile() {
-    return window.innerWidth <= this.mobileBreakpoint || this.isMobileDevice();
-  }
-
-  isMobileDevice() {
-    if (typeof window.matchMedia === 'function') {
-      if (window.matchMedia('(pointer: coarse)').matches) {
-        return true;
-      }
-
-      if (window.matchMedia('(hover: none)').matches) {
-        return true;
-      }
-    }
-
-    if (typeof navigator.maxTouchPoints === 'number' && navigator.maxTouchPoints > 0) {
-      return true;
-    }
-
-    if (navigator.userAgentData && typeof navigator.userAgentData.mobile === 'boolean') {
-      return navigator.userAgentData.mobile;
-    }
-
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile/i.test(
-      navigator.userAgent
-    );
-  }
-
   effectiveColumns() {
-    return this.isMobile() ? 2 : this.columns;
+    return this.columns;
   }
 }
 
