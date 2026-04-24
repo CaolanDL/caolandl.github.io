@@ -2,14 +2,6 @@
   {
     "width": 664,
     "height": 1000,
-    "path": "./photos/140241010023.jpg",
-    "compressed_path": "./photos/140241010023.min.jpg",
-    "compressed": false,
-    "placeholder_path": "./photos/140241010023.placeholder.jpg"
-  },
-  {
-    "width": 664,
-    "height": 1000,
     "path": "./photos/140241020016.jpg",
     "compressed_path": "./photos/140241020016.min.jpg",
     "compressed": false,
@@ -22,22 +14,6 @@
     "compressed_path": "./photos/140241020029.min.jpg",
     "compressed": false,
     "placeholder_path": "./photos/140241020029.placeholder.jpg"
-  },
-  {
-    "width": 3854,
-    "height": 5328,
-    "path": "./photos/DSC00695.jpg",
-    "compressed_path": "./photos/DSC00695.min.jpg",
-    "compressed": false,
-    "placeholder_path": "./photos/DSC00695.placeholder.jpg"
-  },
-  {
-    "width": 4160,
-    "height": 6240,
-    "path": "./photos/DSCF0275.jpg",
-    "compressed_path": "./photos/DSCF0275.min.jpg",
-    "compressed": false,
-    "placeholder_path": "./photos/DSCF0275.placeholder.jpg"
   },
   {
     "width": 800,
@@ -56,36 +32,12 @@
     "placeholder_path": "./photos/DSCF2289.placeholder.jpg"
   },
   {
-    "width": 4160,
-    "height": 6150,
-    "path": "./photos/DSCF4344.jpg",
-    "compressed_path": "./photos/DSCF4344.min.jpg",
-    "compressed": false,
-    "placeholder_path": "./photos/DSCF4344.placeholder.jpg"
-  },
-  {
-    "width": 667,
-    "height": 1000,
-    "path": "./photos/DSCF4439.jpg",
-    "compressed_path": "./photos/DSCF4439.min.jpg",
-    "compressed": false,
-    "placeholder_path": "./photos/DSCF4439.placeholder.jpg"
-  },
-  {
     "width": 800,
     "height": 1000,
     "path": "./photos/DSCF4458.jpg",
     "compressed_path": "./photos/DSCF4458.min.jpg",
     "compressed": false,
     "placeholder_path": "./photos/DSCF4458.placeholder.jpg"
-  },
-  {
-    "width": 1000,
-    "height": 667,
-    "path": "./photos/DSCF4495.jpg",
-    "compressed_path": "./photos/DSCF4495.min.jpg",
-    "compressed": false,
-    "placeholder_path": "./photos/DSCF4495.placeholder.jpg"
   },
   {
     "width": 800,
@@ -104,6 +56,46 @@
     "placeholder_path": "./photos/DSCF4915.placeholder.jpg"
   },
   {
+    "width": 1920,
+    "height": 2400,
+    "path": "./photos/DSCF6103.jpg",
+    "compressed_path": "./photos/DSCF6103.min.jpg",
+    "compressed": false,
+    "placeholder_path": "./photos/DSCF6103.placeholder.jpg"
+  },
+  {
+    "width": 1920,
+    "height": 2400,
+    "path": "./photos/DSCF6110.jpg",
+    "compressed_path": "./photos/DSCF6110.min.jpg",
+    "compressed": false,
+    "placeholder_path": "./photos/DSCF6110.placeholder.jpg"
+  },
+  {
+    "width": 2400,
+    "height": 1600,
+    "path": "./photos/DSCF6163.jpg",
+    "compressed_path": "./photos/DSCF6163.min.jpg",
+    "compressed": false,
+    "placeholder_path": "./photos/DSCF6163.placeholder.jpg"
+  },
+  {
+    "width": 2400,
+    "height": 1600,
+    "path": "./photos/DSCF6173.jpg",
+    "compressed_path": "./photos/DSCF6173.min.jpg",
+    "compressed": false,
+    "placeholder_path": "./photos/DSCF6173.placeholder.jpg"
+  },
+  {
+    "width": 1714,
+    "height": 2400,
+    "path": "./photos/DSCF6357.jpg",
+    "compressed_path": "./photos/DSCF6357.min.jpg",
+    "compressed": false,
+    "placeholder_path": "./photos/DSCF6357.placeholder.jpg"
+  },
+  {
     "width": 800,
     "height": 1000,
     "path": "./photos/DSCF9386_1.jpg",
@@ -112,11 +104,27 @@
     "placeholder_path": "./photos/DSCF9386_1.placeholder.jpg"
   },
   {
+    "width": 1920,
+    "height": 2400,
+    "path": "./photos/IMG_5192.jpg",
+    "compressed_path": "./photos/IMG_5192.min.jpg",
+    "compressed": false,
+    "placeholder_path": "./photos/IMG_5192.placeholder.jpg"
+  },
+  {
     "width": 667,
     "height": 1000,
     "path": "./photos/P1687083.jpg",
     "compressed_path": "./photos/P1687083.min.jpg",
     "compressed": false,
     "placeholder_path": "./photos/P1687083.placeholder.jpg"
+  },
+  {
+    "width": 1920,
+    "height": 2400,
+    "path": "./photos/P1687882.jpg",
+    "compressed_path": "./photos/P1687882.min.jpg",
+    "compressed": false,
+    "placeholder_path": "./photos/P1687882.placeholder.jpg"
   }
 ]
