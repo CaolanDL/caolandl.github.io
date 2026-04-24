@@ -1,68 +1,60 @@
 {
   "1 Portraits": [
     {
+      "width": 1714,
+      "height": 2400,
+      "path": "./photos/1 Portraits/1000 - DSCF6357.jpg",
+      "compressed_path": "./photos/1 Portraits/1000 - DSCF6357.min.jpg",
+      "compressed": false,
+      "placeholder_path": "./photos/1 Portraits/1000 - DSCF6357.placeholder.jpg"
+    },
+    {
+      "width": 1920,
+      "height": 2400,
+      "path": "./photos/1 Portraits/2000 - DSCF6103.jpg",
+      "compressed_path": "./photos/1 Portraits/2000 - DSCF6103.min.jpg",
+      "compressed": false,
+      "placeholder_path": "./photos/1 Portraits/2000 - DSCF6103.placeholder.jpg"
+    },
+    {
       "width": 664,
       "height": 1000,
-      "path": "./photos/1 Portraits/140241020016.jpg",
-      "compressed_path": "./photos/1 Portraits/140241020016.min.jpg",
+      "path": "./photos/1 Portraits/3000 -140241020016.jpg",
+      "compressed_path": "./photos/1 Portraits/3000 -140241020016.min.jpg",
       "compressed": false,
-      "placeholder_path": "./photos/1 Portraits/140241020016.placeholder.jpg"
-    },
-    {
-      "width": 1000,
-      "height": 664,
-      "path": "./photos/1 Portraits/140241020029.jpg",
-      "compressed_path": "./photos/1 Portraits/140241020029.min.jpg",
-      "compressed": false,
-      "placeholder_path": "./photos/1 Portraits/140241020029.placeholder.jpg"
-    },
-    {
-      "width": 1920,
-      "height": 2400,
-      "path": "./photos/1 Portraits/DSCF6103.jpg",
-      "compressed_path": "./photos/1 Portraits/DSCF6103.min.jpg",
-      "compressed": false,
-      "placeholder_path": "./photos/1 Portraits/DSCF6103.placeholder.jpg"
-    },
-    {
-      "width": 1920,
-      "height": 2400,
-      "path": "./photos/1 Portraits/DSCF6110.jpg",
-      "compressed_path": "./photos/1 Portraits/DSCF6110.min.jpg",
-      "compressed": false,
-      "placeholder_path": "./photos/1 Portraits/DSCF6110.placeholder.jpg"
+      "placeholder_path": "./photos/1 Portraits/3000 -140241020016.placeholder.jpg"
     },
     {
       "width": 2400,
       "height": 1600,
-      "path": "./photos/1 Portraits/DSCF6163.jpg",
-      "compressed_path": "./photos/1 Portraits/DSCF6163.min.jpg",
+      "path": "./photos/1 Portraits/3500 - DSCF6173.jpg",
+      "compressed_path": "./photos/1 Portraits/3500 - DSCF6173.min.jpg",
       "compressed": false,
-      "placeholder_path": "./photos/1 Portraits/DSCF6163.placeholder.jpg"
+      "placeholder_path": "./photos/1 Portraits/3500 - DSCF6173.placeholder.jpg"
     },
     {
-      "width": 2400,
-      "height": 1600,
-      "path": "./photos/1 Portraits/DSCF6173.jpg",
-      "compressed_path": "./photos/1 Portraits/DSCF6173.min.jpg",
+      "width": 1920,
+      "height": 2400,
+      "path": "./photos/1 Portraits/4000 - DSCF6110.jpg",
+      "compressed_path": "./photos/1 Portraits/4000 - DSCF6110.min.jpg",
       "compressed": false,
-      "placeholder_path": "./photos/1 Portraits/DSCF6173.placeholder.jpg"
+      "placeholder_path": "./photos/1 Portraits/4000 - DSCF6110.placeholder.jpg"
     },
     {
       "width": 1067,
       "height": 1600,
-      "path": "./photos/1 Portraits/DSCF6335_1.jpg",
-      "compressed_path": "./photos/1 Portraits/DSCF6335_1.min.jpg",
+      "path": "./photos/1 Portraits/4000 - DSCF6335_1.jpg",
+      "compressed_path": "./photos/1 Portraits/4000 - DSCF6335_1.min.jpg",
       "compressed": false,
-      "placeholder_path": "./photos/1 Portraits/DSCF6335_1.placeholder.jpg"
+      "placeholder_path": "./photos/1 Portraits/4000 - DSCF6335_1.placeholder.jpg"
     },
     {
-      "width": 1714,
-      "height": 2400,
-      "path": "./photos/1 Portraits/DSCF6357.jpg",
-      "compressed_path": "./photos/1 Portraits/DSCF6357.min.jpg",
+      "width": 2400,
+      "height": 1600,
+      "path": "./photos/1 Portraits/5000 - DSCF6163.jpg",
+      "compressed_path": "./photos/1 Portraits/5000 - DSCF6163.min.jpg",
       "compressed": false,
-      "placeholder_path": "./photos/1 Portraits/DSCF6357.placeholder.jpg"
+      "placeholder_path": "./photos/1 Portraits/5000 - DSCF6163.placeholder.jpg"
     },
     {
       "width": 1920,
@@ -83,52 +75,52 @@
   ],
   "2 Pets": [
     {
-      "width": 1061,
-      "height": 1600,
-      "path": "./photos/2 Pets/140241010023_1.jpg",
-      "compressed_path": "./photos/2 Pets/140241010023_1.min.jpg",
-      "compressed": false,
-      "placeholder_path": "./photos/2 Pets/140241010023_1.placeholder.jpg"
-    },
-    {
-      "width": 800,
-      "height": 1000,
-      "path": "./photos/2 Pets/DSCF0423.jpg",
-      "compressed_path": "./photos/2 Pets/DSCF0423.min.jpg",
-      "compressed": false,
-      "placeholder_path": "./photos/2 Pets/DSCF0423.placeholder.jpg"
-    },
-    {
-      "width": 800,
-      "height": 1000,
-      "path": "./photos/2 Pets/DSCF2289.jpg",
-      "compressed_path": "./photos/2 Pets/DSCF2289.min.jpg",
-      "compressed": false,
-      "placeholder_path": "./photos/2 Pets/DSCF2289.placeholder.jpg"
-    },
-    {
       "width": 1920,
       "height": 2400,
-      "path": "./photos/2 Pets/DSCF5701.jpg",
-      "compressed_path": "./photos/2 Pets/DSCF5701.min.jpg",
+      "path": "./photos/2 Pets/1000 - DSCF5701.jpg",
+      "compressed_path": "./photos/2 Pets/1000 - DSCF5701.min.jpg",
       "compressed": false,
-      "placeholder_path": "./photos/2 Pets/DSCF5701.placeholder.jpg"
+      "placeholder_path": "./photos/2 Pets/1000 - DSCF5701.placeholder.jpg"
     },
     {
       "width": 1280,
       "height": 1600,
-      "path": "./photos/2 Pets/DSCF8261_1.jpg",
-      "compressed_path": "./photos/2 Pets/DSCF8261_1.min.jpg",
+      "path": "./photos/2 Pets/2000 - DSCF8261_1.jpg",
+      "compressed_path": "./photos/2 Pets/2000 - DSCF8261_1.min.jpg",
       "compressed": false,
-      "placeholder_path": "./photos/2 Pets/DSCF8261_1.placeholder.jpg"
+      "placeholder_path": "./photos/2 Pets/2000 - DSCF8261_1.placeholder.jpg"
     },
     {
       "width": 800,
       "height": 1000,
-      "path": "./photos/2 Pets/DSCF9386_1.jpg",
-      "compressed_path": "./photos/2 Pets/DSCF9386_1.min.jpg",
+      "path": "./photos/2 Pets/3000 - DSCF9386_1.jpg",
+      "compressed_path": "./photos/2 Pets/3000 - DSCF9386_1.min.jpg",
       "compressed": false,
-      "placeholder_path": "./photos/2 Pets/DSCF9386_1.placeholder.jpg"
+      "placeholder_path": "./photos/2 Pets/3000 - DSCF9386_1.placeholder.jpg"
+    },
+    {
+      "width": 800,
+      "height": 1000,
+      "path": "./photos/2 Pets/4000 - DSCF2289.jpg",
+      "compressed_path": "./photos/2 Pets/4000 - DSCF2289.min.jpg",
+      "compressed": false,
+      "placeholder_path": "./photos/2 Pets/4000 - DSCF2289.placeholder.jpg"
+    },
+    {
+      "width": 800,
+      "height": 1000,
+      "path": "./photos/2 Pets/5000 -DSCF0423.jpg",
+      "compressed_path": "./photos/2 Pets/5000 -DSCF0423.min.jpg",
+      "compressed": false,
+      "placeholder_path": "./photos/2 Pets/5000 -DSCF0423.placeholder.jpg"
+    },
+    {
+      "width": 1061,
+      "height": 1600,
+      "path": "./photos/2 Pets/9999 - 140241010023_1.jpg",
+      "compressed_path": "./photos/2 Pets/9999 - 140241010023_1.min.jpg",
+      "compressed": false,
+      "placeholder_path": "./photos/2 Pets/9999 - 140241010023_1.placeholder.jpg"
     }
   ],
   "3 Food": [
