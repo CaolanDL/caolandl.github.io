@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 SCRIPT_PATH=$(dirname "$0")
+shopt -s globstar nullglob
 
 # Create a duplicate of each photo, and then minify them
 if [[ "$OSTYPE" == "darwin"* && -x "$(command -v sips)" ]]; then

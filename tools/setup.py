@@ -27,11 +27,6 @@ def is_min_path(path):
     return '.min.' in path and is_image_path(path)
 
 
-def get_directories():
-    items = os.listdir(PHOTO_PATH)
-    return list(filter(lambda x: os.path.isdir(PHOTO_PATH + '/' + x), items))
-
-
 def is_image_path(path):
     return re.search(r'\.(jpe?g|png)$', path)
 
@@ -48,27 +43,27 @@ def get_path(path, ext):
     return re.sub(r'\.(png|jpe?g)$', '.' + ext + '.\g<1>', path)
 
 
-def get_images(path):
-    items = os.listdir(PHOTO_PATH + '/' + path)
-    filtered_items = list(filter(is_original, items))
-
+def get_images():
     result = []
-    for img in filtered_items:
-        width, height = 0, 0
-        has_compressed = False
-        p = './' + RELATIVE_PATH + '/' + path + '/' + img
-        with open(PHOTO_PATH + '/' + path + '/' + img, 'rb') as f:
-            _, width, height = getImageInfo(f.read())
-        if os.path.isfile(get_min_path(p)):
-            has_compressed = True
-        result.append({
-            'width': width,
-            'height': height,
-            'path': './' + RELATIVE_PATH + '/' + path + '/' + img,
-            'compressed_path': get_min_path(p),
-            'compressed': has_compressed,
-            'placeholder_path': get_placeholder_path(p)
-        })
+    for root, _, items in os.walk(PHOTO_PATH):
+        filtered_items = list(filter(is_original, items))
+        for img in filtered_items:
+            file_path = os.path.join(root, img)
+            width, height = 0, 0
+            has_compressed = False
+            relative_path = './' + os.path.relpath(file_path, PATH).replace('\\', '/')
+            with open(file_path, 'rb') as f:
+                _, width, height = getImageInfo(f.read())
+            if os.path.isfile(get_min_path(relative_path)):
+                has_compressed = True
+            result.append({
+                'width': width,
+                'height': height,
+                'path': relative_path,
+                'compressed_path': get_min_path(relative_path),
+                'compressed': has_compressed,
+                'placeholder_path': get_placeholder_path(relative_path)
+            })
     return result
 
 
@@ -78,20 +73,9 @@ def write_config(config):
 
 
 def run():
-    print('Starting to collect all albums within the /photos directory...')
-    config = {}
-    dirs = get_directories()
-    print('Found {length} directories'.format(length=len(dirs)))
-    for i, path in enumerate(dirs):
-        print(str(i+1) + ': Processing photos for the album "{album}"'.format(
-            album=path))
-        config[path] = get_images(path)
-
-        print('   Done processing {l} photos for "{album}"\n'.format(
-            l=len(config[path]),
-            album=path))
-
-    print('Done processing all {length} albums'.format(length=len(dirs)))
+    print('Starting to collect all photos within the /photos directory...')
+    config = get_images()
+    print('Found {length} photos'.format(length=len(config)))
     print('Writing files to {path} now...'.format(path=PATH + 'config.json'))
     write_config(config)
     print('''Done writing! You may now safely close this window :)

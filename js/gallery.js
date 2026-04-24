@@ -1,26 +1,26 @@
 /**
  * Config file. Contains all of the options for laying out the photos, as well
- * as the albums and photo metadata.
+ * as the photo metadata.
  */
 class Config {
   constructor(config, opts) {
-    this.data = config;
+    this.data = Array.isArray(config) ? config : this.flattenGroupedPhotos(config);
     this.maxHeight = opts.maxHeight || 400;
     this.spacing = opts.spacing || 10;
     this.shuffle = opts.shuffle || false;
     this.columns = opts.columns || 3;
   };
 
-  photos(album) {
-    return this.data[album];
+  flattenGroupedPhotos(config) {
+    var photos = [];
+    for (var album in config) {
+      photos = photos.concat(config[album]);
+    }
+    return photos;
   }
 
   allPhotos() {
-    var photos = [];
-    for (var album in this.data) {
-      photos = photos.concat(this.data[album]);
-    }
-    return photos;
+    return this.data.slice();
   }
 }
 
@@ -90,7 +90,7 @@ class VerticalRenderer extends Renderer {
   }
 
   /**
-   * Creates one album
+   * Creates one gallery section
    */
   createSection(config, section, photos) {
     var sectionElem = this.createHeader(section);
@@ -173,7 +173,7 @@ class SquareRenderer extends Renderer {
   }
 
   /**
-   * Creates an album section
+   * Creates a gallery section
    */
   createSection(config, section, photos) {
     var sectionElem = this.createHeader(section);
@@ -258,7 +258,7 @@ class HorizontalRenderer extends Renderer {
   }
 
   /**
-   * Creates an album section
+   * Creates a gallery section
    */
   createSection(config, section, photos) {
     if (config.shuffle) {

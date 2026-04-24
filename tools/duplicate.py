@@ -27,13 +27,9 @@ def is_original(path):
 
 
 def main(ext):
-    for folder in os.listdir(PHOTO_PATH):
-        # Ignore other files like .DS_Store
-        if not os.path.isdir(PHOTO_PATH + folder):
-            continue
-
-        for f in os.listdir(PHOTO_PATH + folder):
-            path = PHOTO_PATH + folder + '/' + f
+    for root, _, files in os.walk(PHOTO_PATH):
+        for f in files:
+            path = os.path.join(root, f)
             if is_image_path(path) and is_original(path):
                 min_path = get_path(path, ext)
                 shutil.copy(path, min_path)

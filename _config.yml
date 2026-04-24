@@ -18,7 +18,7 @@ layout_style: COLUMNS
 # Integer: Spacing between each photo
 spacing: 10
 
-# Boolean(true|false): Shuffle the photos in the album
+# Boolean(true|false): Shuffle the photos in the gallery
 shuffle: true
 
 # Integer: Number of columns for square or columns
@@ -42,8 +42,7 @@ author: Caolán
 # Your email if you want it to be linked on the contact page
 author_email: CSTUDIO@GMAIL.COM
 
-# The directory for category index pages. Change it to something else if
-# for example you want links like /categories/category1 instead of /category1
+# Legacy Jekyll setting kept for compatibility; the gallery no longer uses photo categories.
 category_dir: /
 
 # Uncomment if you are planning to run the blog in a subdirectory
