@@ -20,12 +20,12 @@ a {
 
 #container {
   margin: 0 auto;
-  max-width: 1600px;
-  width: 94%;
+  max-width: 1480px;
+  width: 90%;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 60px;
+  gap: 28px;
 }
 
 .sidebar {
