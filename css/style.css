@@ -33,6 +33,8 @@ a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  position: sticky;
+  top: 32px;
 }
 
 body.has-contact-banner {
@@ -241,6 +243,7 @@ section img.img-loaded {
     width: 100%;
     max-width: none;
     align-items: flex-start;
+    position: static;
   }
 
   .header {
