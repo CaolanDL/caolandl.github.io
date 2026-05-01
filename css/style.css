@@ -15,7 +15,7 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 48px;
+  gap: 96px;
 }
 
 .sidebar {
@@ -89,16 +89,27 @@ body.has-contact-banner {
   margin: 0;
 }
 
+.about {
+  margin-bottom: 36px;
+  text-align: right;
+  width: 100%;
+}
+
+.about p {
+  line-height: 1.7;
+}
+
 .contacts-bar {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: flex-start;
   margin-bottom: 32px;
   max-width: 100%;
   background: transparent;
   gap: 14px;
   width: 100%;
+  text-align: right;
 }
 
 .contacts-bar__link {
@@ -107,12 +118,17 @@ body.has-contact-banner {
   font-size: 16px;
   transition: 0.2s opacity;
   display: inline-flex;
+  justify-content: flex-end;
   font-weight: 400;
   white-space: normal;
 }
 
 .contacts-bar__link:hover {
   opacity: 0.7;
+}
+
+.contacts-bar #instagram {
+  margin-top: 12px;
 }
 
 #gallery {
