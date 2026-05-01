@@ -25,16 +25,16 @@ a {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 40px;
+  gap: 32px;
 }
 
 .sidebar {
-  flex: 0 0 370px;
+  flex: 0 0 340px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   position: sticky;
-  top: 32px;
+  top: 0;
 }
 
 body.has-contact-banner {
@@ -87,7 +87,7 @@ body.has-contact-banner {
 }
 
 .header {
-  margin-top: 120px;
+  margin-top: 60px;
   margin-bottom: 60px;
   text-align: right;
   width: 100%;
@@ -102,7 +102,7 @@ body.has-contact-banner {
 }
 
 .about {
-  margin-bottom: 28px;
+  margin-bottom: 44px;
   text-align: right;
   width: 100%;
 }
