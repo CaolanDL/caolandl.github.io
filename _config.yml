@@ -3,10 +3,10 @@
 #############################
 
 # The title that appears on the tab
-title: < CSTUDIO >
+title: < CxSTUDIO >
 
 # The title on the web page
-full_name: CSTUDIO
+full_name: CxSTUDIO
 
 # The type of layout
 # Options: ROWS, SQUARES, COLUMNS
@@ -31,7 +31,7 @@ max_height: 650
 instagram: caolan.photo
 
 # Name of your gallery (this will show up at the top of your page and in the RSS feed)
-name: CSTUDIO GALLERY
+name: CxSTUDIO GALLERY
 
 # Short description (goes below the title; it will also be used in the RSS feed)
 description: Photographer based in Colchester, Essex. 
@@ -40,7 +40,7 @@ description: Photographer based in Colchester, Essex.
 author: Caolán
 
 # Your email if you want it to be linked on the contact page
-author_email: CSTUDIO@GMAIL.COM
+author_email: CxSTUDIO@GMAIL.COM
 
 # Legacy Jekyll setting kept for compatibility; the gallery no longer uses photo categories.
 category_dir: /

@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <IMG>
 	<E K="Author" V="16.6.6.3111 Pro Win" />
-	<E K="Camera_Lens" V="Fujifilm Fujinon XF70-300mmF4-5.6 R LM OIS WR" />
-	<E K="Camera_Make" V="FUJIFILM" />
-	<E K="Camera_Model" V="X-T3" />
+	<E K="Camera_Lens" V="-- mm f/--" />
+	<E K="Camera_Make" V="Joint Photographic Experts Group" />
+	<E K="Camera_Model" V="Jpeg File" />
 	<E K="Camera_Serial" V="1D610970" />
 	<E K="Camera_Software" V="Capture One Windows" />
 	<E K="CameraDisplayName" V="Jpeg File" />
@@ -21,7 +21,7 @@
 	<E K="Exp_ShutterSpeed" V="0.00222222227603197" />
 	<E K="Exp_WhiteBalance" V="1" />
 	<E K="File_Size" V="531139" />
-	<E K="Height" V="2400" />
+	<E K="Height" V="1000" />
 	<E K="ImageClassification" V="19" />
 	<E K="ISO" V="640" />
 	<E K="MultiShotCount" V="0" />
@@ -32,16 +32,16 @@
 	<E K="PixelWidth" V="0" />
 	<E K="UUID" V="F43D0A56-A344-42C6-8DF4-4DB25AD83964" />
 	<E K="Version" V="1530" />
-	<E K="Width" V="1600" />
+	<E K="Width" V="667" />
 	<VAR Engine="1300">
-		<E K="HighResProcessCounter" V="0" />
-		<E K="LastMetadataModificationDate" V="-62135596800.000000" />
-		<E K="LowResProcessCounter" V="0" />
+		<E K="HighResProcessCounter" V="33" />
+		<E K="LastMetadataModificationDate" V="-2209075200.000000" />
+		<E K="LowResProcessCounter" V="62" />
 		<E K="ProductID" V="FileSystemJpeg" />
-		<E K="RawMetadataModificationDate" V="-62135596800.000000" />
-		<E K="SyncProcessCounter" V="0" />
+		<E K="RawMetadataModificationDate" V="-2209075200.000000" />
+		<E K="SyncProcessCounter" V="29" />
 		<E K="UUID" V="65FBEFA9-C359-4920-8845-83761C60A3EE" />
-		<E K="XMPMetadataModificationdate" V="-62135596800.000000" />
+		<E K="XMPMetadataModificationdate" V="-2209075200.000000" />
 		<DL>
 			<E K="BlackRecovery" V="0" />
 			<E K="Brightness" V="0" />
@@ -56,6 +56,7 @@
 			<E K="BwMagenta" V="0" />
 			<E K="BwRed" V="0" />
 			<E K="BwYellow" V="0" />
+			<E K="CalculatedDehazeColor" V="0;0;0" />
 			<E K="Clarity" V="0" />
 			<E K="ClarityMethod" V="3" />
 			<E K="ClarityStructure" V="0" />
@@ -71,6 +72,9 @@
 			<E K="Contrast" V="0" />
 			<E K="CropOutsideImage" V="0" />
 			<E K="DehazeAmount" V="0" />
+			<E K="DehazeColor" V="0;0;0" />
+			<E K="DehazeLevelHigh" V="1;1;1" />
+			<E K="DehazeLevelLow" V="0;0;0" />
 			<E K="Exposure" V="0" />
 			<E K="FilmCurve" V="FileSystemJpeg-Auto.fcrv" />
 			<E K="FilmGrainAmount" V="0" />
@@ -95,6 +99,7 @@
 			<E K="Image_DateCreated" V="20250611" />
 			<E K="Image_Scene" V="" />
 			<E K="LensAperture" V="5.59999990463257" />
+			<E K="LensDiffractionCorrectionEnabled" V="0" />
 			<E K="LensFocalLength" V="300" />
 			<E K="LensGeoAbr" V="|0.000000|1|0|0" />
 			<E K="LensLccLightFalloffAmount" V="0" />
@@ -107,6 +112,8 @@
 			<E K="RetouchingBlemishRemovalAmount" V="0" />
 			<E K="RetouchingDarkCirclesReductionAmount" V="0" />
 			<E K="RetouchingFaceSculptingContouring" V="0" />
+			<E K="RetouchingIncludeNeckInBlemishRemoval" V="0" />
+			<E K="RetouchingIncludeNeckInSkinEvening" V="0" />
 			<E K="RetouchingOpacity" V="100" />
 			<E K="RetouchingSkinEveningAmount" V="0" />
 			<E K="RetouchingSkinEveningTexture" V="0" />
@@ -120,10 +127,13 @@
 			<E K="SurfaceSmoothnessAmount" V="0" />
 			<E K="TargetHighlight" V="1;1;1;1" />
 			<E K="TargetShadow" V="0;0;0;0" />
+			<E K="TechnicalProcessingMethod" V="0" />
 			<E K="UsmAmount" V="0" />
 			<E K="UsmHaloControl" V="0" />
+			<E K="UsmMethod" V="0" />
 			<E K="UsmRadius" V="0.800000011920929" />
 			<E K="UsmThreshold" V="1" />
+			<E K="UUID" V="00000000-0000-0000-0000-000000000000" />
 			<E K="Vignetting" V="0|1|0|1" />
 			<E K="WhiteBalance" V="1;1;1" />
 			<E K="WhiteRecovery" V="0" />
