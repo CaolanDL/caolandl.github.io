@@ -228,7 +228,7 @@ section img.img-loaded {
   line-height: 18px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 900px), (hover: none) and (pointer: coarse) and (orientation: portrait) {
   #container {
     width: calc(100% - 32px);
     flex-direction: column;
