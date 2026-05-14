@@ -14,43 +14,61 @@
   </head>
   <body>
     <div id="container">
-      <div class="sidebar">
+      <aside class="site-menu">
         <!--------------- YOUR COMPANY LOGO -------------->
         <div class="header">
           <img src="assets/CSTUDIO.png" alt="{{ site.full_name }} logo" class="site-logo">
         </div>
 
-        <div class="about">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+          <span class="menu-toggle__bar"></span>
+          <span class="menu-toggle__bar"></span>
+          <span class="menu-toggle__bar"></span>
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+          <button class="nav-button is-active" type="button" data-nav-target="gallery">Gallery</button>
+          <button class="nav-button" type="button" data-nav-target="about">About</button>
+          <button class="nav-button" type="button" data-nav-target="contact">Contact</button>
+        </nav>
+      </aside>
+
+      <main id="content" class="content-shell">
+        <section id="gallery-panel" class="content-panel is-active" data-panel="gallery" aria-label="Gallery" tabindex="-1">
+          <div id="gallery"></div>
+        </section>
+
+        <section id="about-panel" class="content-panel info-panel" data-panel="about" aria-labelledby="about-title" tabindex="-1" hidden>
+          <h1 id="about-title">About</h1>
           <p>
-            Based in Colchester, Essex. <br>
-            Images with a focus on <span class="about__light">light</span> and <span class="about__colour">colour</span>. <br>
+            Based in Colchester, Essex.
+          </p>
+          <p>
+            Images with a focus on <span class="about__light">light</span> and <span class="about__colour">colour</span>.
+          </p>
+          <p>
             Email for enquiries and bookings.
           </p>
-        </div>
+        </section>
 
-        <!--------------- CONTACTS BAR -------------->
-        <div class="contacts-bar">
-          <a href="mailto:contact@cxstudio.com" class="contacts-bar__link">
-            contact@cxstudio.com
-            <i class="fa fa-envelope" aria-hidden="true"></i>
-          </a>
-          <a href="tel:+447821264406" class="contacts-bar__link">
-            +44 7821 264406
-            <i class="fa fa-phone" aria-hidden="true"></i>
-          </a>
-          <a id="instagram" class="links__icon" href="https://www.instagram.com/{{ site.instagram }}">
-              <span class="view-ig">Instagram</span>
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-          </a>
-        </div>
-        <div class="footer">
-          <div class="links">
-
+        <section id="contact-panel" class="content-panel info-panel" data-panel="contact" aria-labelledby="contact-title" tabindex="-1" hidden>
+          <h1 id="contact-title">Contact</h1>
+          <div class="contacts-bar">
+            <a href="mailto:contact@cxstudio.com" class="contacts-bar__link">
+              contact@cxstudio.com
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+            </a>
+            <a href="tel:+447821264406" class="contacts-bar__link">
+              +44 7821 264406
+              <i class="fa fa-phone" aria-hidden="true"></i>
+            </a>
+            <a id="instagram" class="links__icon" href="https://www.instagram.com/{{ site.instagram }}">
+                <span class="view-ig">Instagram</span>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
           </div>
-        </div>
-      </div>
-      <div id="gallery">
-      </div>
+        </section>
+      </main>
     </div>
   </body>
   <script
