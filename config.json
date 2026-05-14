@@ -41,8 +41,8 @@
       "placeholder_path": "./photos/100 Portraits/4000 - DSCF6110.placeholder.jpg"
     },
     {
-      "width": 667,
-      "height": 1000,
+      "width": 599,
+      "height": 899,
       "path": "./photos/100 Portraits/4000 - DSCF6335_1.jpg",
       "compressed_path": "./photos/100 Portraits/4000 - DSCF6335_1.min.jpg",
       "compressed": false,
@@ -55,64 +55,88 @@
       "compressed_path": "./photos/100 Portraits/5000 - DSCF6163.min.jpg",
       "compressed": false,
       "placeholder_path": "./photos/100 Portraits/5000 - DSCF6163.placeholder.jpg"
-    },
-    {
-      "width": 800,
-      "height": 1000,
-      "path": "./photos/100 Portraits/IMG_5192.jpg",
-      "compressed_path": "./photos/100 Portraits/IMG_5192.min.jpg",
-      "compressed": false,
-      "placeholder_path": "./photos/100 Portraits/IMG_5192.placeholder.jpg"
-    },
-    {
-      "width": 930,
-      "height": 1000,
-      "path": "./photos/100 Portraits/Screenshot_2025-01-25-06-14-29-771_com.instagram.android~3.jpg",
-      "compressed_path": "./photos/100 Portraits/Screenshot_2025-01-25-06-14-29-771_com.instagram.android~3.min.jpg",
-      "compressed": false,
-      "placeholder_path": "./photos/100 Portraits/Screenshot_2025-01-25-06-14-29-771_com.instagram.android~3.placeholder.jpg"
     }
   ],
   "200 Food": [
     {
       "width": 800,
       "height": 1000,
-      "path": "./photos/200 Food/DSCF4458.jpg",
-      "compressed_path": "./photos/200 Food/DSCF4458.min.jpg",
+      "path": "./photos/200 Food/01 DSCF4458.jpg",
+      "compressed_path": "./photos/200 Food/01 DSCF4458.min.jpg",
       "compressed": false,
-      "placeholder_path": "./photos/200 Food/DSCF4458.placeholder.jpg"
+      "placeholder_path": "./photos/200 Food/01 DSCF4458.placeholder.jpg"
+    },
+    {
+      "width": 683,
+      "height": 1024,
+      "path": "./photos/200 Food/02 DSCF4439.jpg",
+      "compressed_path": "./photos/200 Food/02 DSCF4439.min.jpg",
+      "compressed": false,
+      "placeholder_path": "./photos/200 Food/02 DSCF4439.placeholder.jpg"
     },
     {
       "width": 800,
       "height": 1000,
-      "path": "./photos/200 Food/DSCF4745.jpg",
-      "compressed_path": "./photos/200 Food/DSCF4745.min.jpg",
+      "path": "./photos/200 Food/03 DSCF4745.jpg",
+      "compressed_path": "./photos/200 Food/03 DSCF4745.min.jpg",
       "compressed": false,
-      "placeholder_path": "./photos/200 Food/DSCF4745.placeholder.jpg"
-    },
-    {
-      "width": 800,
-      "height": 1000,
-      "path": "./photos/200 Food/DSCF4915.jpg",
-      "compressed_path": "./photos/200 Food/DSCF4915.min.jpg",
-      "compressed": false,
-      "placeholder_path": "./photos/200 Food/DSCF4915.placeholder.jpg"
-    },
-    {
-      "width": 800,
-      "height": 1000,
-      "path": "./photos/200 Food/DSCF4940.jpg",
-      "compressed_path": "./photos/200 Food/DSCF4940.min.jpg",
-      "compressed": false,
-      "placeholder_path": "./photos/200 Food/DSCF4940.placeholder.jpg"
+      "placeholder_path": "./photos/200 Food/03 DSCF4745.placeholder.jpg"
     },
     {
       "width": 667,
       "height": 1000,
-      "path": "./photos/200 Food/P1687083.jpg",
-      "compressed_path": "./photos/200 Food/P1687083.min.jpg",
+      "path": "./photos/200 Food/04 P1687083.jpg",
+      "compressed_path": "./photos/200 Food/04 P1687083.min.jpg",
       "compressed": false,
-      "placeholder_path": "./photos/200 Food/P1687083.placeholder.jpg"
+      "placeholder_path": "./photos/200 Food/04 P1687083.placeholder.jpg"
+    },
+    {
+      "width": 683,
+      "height": 1024,
+      "path": "./photos/200 Food/05 DSCF4759.jpg",
+      "compressed_path": "./photos/200 Food/05 DSCF4759.min.jpg",
+      "compressed": false,
+      "placeholder_path": "./photos/200 Food/05 DSCF4759.placeholder.jpg"
+    },
+    {
+      "width": 819,
+      "height": 1024,
+      "path": "./photos/200 Food/05.5 DSCF4388.jpg",
+      "compressed_path": "./photos/200 Food/05.5 DSCF4388.min.jpg",
+      "compressed": false,
+      "placeholder_path": "./photos/200 Food/05.5 DSCF4388.placeholder.jpg"
+    },
+    {
+      "width": 800,
+      "height": 1000,
+      "path": "./photos/200 Food/06 DSCF4915.jpg",
+      "compressed_path": "./photos/200 Food/06 DSCF4915.min.jpg",
+      "compressed": false,
+      "placeholder_path": "./photos/200 Food/06 DSCF4915.placeholder.jpg"
+    },
+    {
+      "width": 819,
+      "height": 1024,
+      "path": "./photos/200 Food/07 DSCF4938.jpg",
+      "compressed_path": "./photos/200 Food/07 DSCF4938.min.jpg",
+      "compressed": false,
+      "placeholder_path": "./photos/200 Food/07 DSCF4938.placeholder.jpg"
+    },
+    {
+      "width": 819,
+      "height": 1024,
+      "path": "./photos/200 Food/DSCF4351.jpg",
+      "compressed_path": "./photos/200 Food/DSCF4351.min.jpg",
+      "compressed": false,
+      "placeholder_path": "./photos/200 Food/DSCF4351.placeholder.jpg"
+    },
+    {
+      "width": 683,
+      "height": 1024,
+      "path": "./photos/200 Food/DSCF4722.jpg",
+      "compressed_path": "./photos/200 Food/DSCF4722.min.jpg",
+      "compressed": false,
+      "placeholder_path": "./photos/200 Food/DSCF4722.placeholder.jpg"
     }
   ],
   "300 Pets": [
@@ -155,40 +179,74 @@
       "compressed_path": "./photos/300 Pets/5000 -DSCF0423.min.jpg",
       "compressed": false,
       "placeholder_path": "./photos/300 Pets/5000 -DSCF0423.placeholder.jpg"
-    },
-    {
-      "width": 663,
-      "height": 1000,
-      "path": "./photos/300 Pets/9999 - 140241010023_1.jpg",
-      "compressed_path": "./photos/300 Pets/9999 - 140241010023_1.min.jpg",
-      "compressed": false,
-      "placeholder_path": "./photos/300 Pets/9999 - 140241010023_1.placeholder.jpg"
     }
   ],
-  "400 Misc": [
+  "400 Product": [
+    {
+      "width": 576,
+      "height": 1024,
+      "path": "./photos/400 Product/Home Studio Practice00149_1.jpg",
+      "compressed_path": "./photos/400 Product/Home Studio Practice00149_1.min.jpg",
+      "compressed": false,
+      "placeholder_path": "./photos/400 Product/Home Studio Practice00149_1.placeholder.jpg"
+    },
+    {
+      "width": 820,
+      "height": 1024,
+      "path": "./photos/400 Product/Home Studio Practice00247_1.jpg",
+      "compressed_path": "./photos/400 Product/Home Studio Practice00247_1.min.jpg",
+      "compressed": false,
+      "placeholder_path": "./photos/400 Product/Home Studio Practice00247_1.placeholder.jpg"
+    },
     {
       "width": 800,
       "height": 1000,
-      "path": "./photos/400 Misc/DSCF2813_HDR_1.jpg",
-      "compressed_path": "./photos/400 Misc/DSCF2813_HDR_1.min.jpg",
+      "path": "./photos/400 Product/P1687882.jpg",
+      "compressed_path": "./photos/400 Product/P1687882.min.jpg",
       "compressed": false,
-      "placeholder_path": "./photos/400 Misc/DSCF2813_HDR_1.placeholder.jpg"
+      "placeholder_path": "./photos/400 Product/P1687882.placeholder.jpg"
+    }
+  ],
+  "500 Other": [
+    {
+      "width": 663,
+      "height": 1000,
+      "path": "./photos/500 Other/9999 - 140241010023_1.jpg",
+      "compressed_path": "./photos/500 Other/9999 - 140241010023_1.min.jpg",
+      "compressed": false,
+      "placeholder_path": "./photos/500 Other/9999 - 140241010023_1.placeholder.jpg"
+    },
+    {
+      "width": 800,
+      "height": 1000,
+      "path": "./photos/500 Other/DSCF2813_HDR_1.jpg",
+      "compressed_path": "./photos/500 Other/DSCF2813_HDR_1.min.jpg",
+      "compressed": false,
+      "placeholder_path": "./photos/500 Other/DSCF2813_HDR_1.placeholder.jpg"
     },
     {
       "width": 667,
       "height": 1000,
-      "path": "./photos/400 Misc/DSCF6008_HDR_2_1.jpg",
-      "compressed_path": "./photos/400 Misc/DSCF6008_HDR_2_1.min.jpg",
+      "path": "./photos/500 Other/DSCF6008_HDR_2_1.jpg",
+      "compressed_path": "./photos/500 Other/DSCF6008_HDR_2_1.min.jpg",
       "compressed": false,
-      "placeholder_path": "./photos/400 Misc/DSCF6008_HDR_2_1.placeholder.jpg"
+      "placeholder_path": "./photos/500 Other/DSCF6008_HDR_2_1.placeholder.jpg"
     },
     {
       "width": 800,
       "height": 1000,
-      "path": "./photos/400 Misc/P1687882.jpg",
-      "compressed_path": "./photos/400 Misc/P1687882.min.jpg",
+      "path": "./photos/500 Other/IMG_5192.jpg",
+      "compressed_path": "./photos/500 Other/IMG_5192.min.jpg",
       "compressed": false,
-      "placeholder_path": "./photos/400 Misc/P1687882.placeholder.jpg"
+      "placeholder_path": "./photos/500 Other/IMG_5192.placeholder.jpg"
+    },
+    {
+      "width": 930,
+      "height": 1000,
+      "path": "./photos/500 Other/Screenshot_2025-01-25-06-14-29-771_com.instagram.android~3.jpg",
+      "compressed_path": "./photos/500 Other/Screenshot_2025-01-25-06-14-29-771_com.instagram.android~3.min.jpg",
+      "compressed": false,
+      "placeholder_path": "./photos/500 Other/Screenshot_2025-01-25-06-14-29-771_com.instagram.android~3.placeholder.jpg"
     }
   ]
 }
