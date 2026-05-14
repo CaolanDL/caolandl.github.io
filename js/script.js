@@ -1,6 +1,7 @@
 var id = 'gallery';
 var galleryConfig = null;
 var currentPanel = 'gallery';
+var currentGalleryCategory = 'all';
 var panelTransitionTimer = null;
 
 function createRenderer() {
@@ -27,14 +28,82 @@ function renderGallery() {
   var galleryRoot = document.getElementById(id);
   galleryRoot.innerHTML = '';
 
+  var activeConfig = getActiveGalleryConfig();
   var renderer = createRenderer();
-  renderer.render(galleryConfig);
+  renderer.render(activeConfig);
   lazyload();
 }
 
 function reqListener() {
   galleryConfig = new Config(JSON.parse(this.responseText), configuration);
+  buildGalleryFilter();
   renderGallery();
+}
+
+function getActiveGalleryConfig() {
+  if (currentGalleryCategory === 'all') {
+    return galleryConfig;
+  }
+
+  var sections = galleryConfig.sections();
+  for (var i = 0; i < sections.length; i++) {
+    if (sections[i].title === currentGalleryCategory) {
+      var filteredData = {};
+      filteredData[sections[i].title] = sections[i].photos.slice();
+      return new Config(filteredData, configuration);
+    }
+  }
+
+  currentGalleryCategory = 'all';
+  setActiveGalleryFilter();
+  return galleryConfig;
+}
+
+function galleryCategoryLabel(category) {
+  return category.replace(/^\d+\s*/, '').replace(/^\s*-\s*/, '').trim();
+}
+
+function setActiveGalleryFilter() {
+  var buttons = document.querySelectorAll('[data-gallery-category]');
+  for (var i = 0; i < buttons.length; i++) {
+    var isActive = buttons[i].getAttribute('data-gallery-category') === currentGalleryCategory;
+    buttons[i].classList.toggle('is-active', isActive);
+    buttons[i].setAttribute('aria-pressed', isActive ? 'true' : 'false');
+  }
+}
+
+function createGalleryFilterButton(category, label) {
+  var button = document.createElement('button');
+  button.className = 'gallery-filter__button';
+  button.type = 'button';
+  button.textContent = label;
+  button.setAttribute('data-gallery-category', category);
+  button.setAttribute('aria-pressed', category === currentGalleryCategory ? 'true' : 'false');
+  button.addEventListener('click', function() {
+    currentGalleryCategory = category;
+    setActiveGalleryFilter();
+    renderGallery();
+  });
+  return button;
+}
+
+function buildGalleryFilter() {
+  var filterRoot = document.getElementById('gallery-filter');
+  if (!filterRoot || !galleryConfig) {
+    return;
+  }
+
+  var sections = galleryConfig.sections();
+  filterRoot.innerHTML = '';
+  filterRoot.appendChild(createGalleryFilterButton('all', 'All'));
+
+  for (var i = 0; i < sections.length; i++) {
+    filterRoot.appendChild(
+      createGalleryFilterButton(sections[i].title, galleryCategoryLabel(sections[i].title))
+    );
+  }
+
+  setActiveGalleryFilter();
 }
 
 function getPanelFromHash() {
@@ -116,7 +185,7 @@ function activatePanel(panelName, options) {
   }
 
   contentShell.classList.add('is-fading');
-  panelTransitionTimer = window.setTimeout(finishTransition, 240);
+  panelTransitionTimer = window.setTimeout(finishTransition, 260);
 }
 
 function initNavigation() {
@@ -142,7 +211,8 @@ function initNavigation() {
   }
 
   document.addEventListener('click', function(event) {
-    if (siteMenu && !siteMenu.contains(event.target)) {
+    var clickedToggle = menuToggle && menuToggle.contains(event.target);
+    if (siteMenu && !siteMenu.contains(event.target) && !clickedToggle) {
       closeMobileMenu();
     }
   });
@@ -168,6 +238,10 @@ window.addEventListener('load', function() {
   if (igElem && igElem.href === 'https://www.instagram.com/') {
     igElem.remove();
   }
+
+  window.setTimeout(function() {
+    document.body.classList.add('opening-complete');
+  }, 2300);
 });
 
 initNavigation();

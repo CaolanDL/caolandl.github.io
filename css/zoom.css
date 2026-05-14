@@ -6,7 +6,7 @@ img[data-action="zoom"] {
 .zoom-img,
 .zoom-img-wrap {
   position: relative;
-  z-index: 99999;
+  z-index: 100000;
   -webkit-transition: all 300ms;
        -o-transition: all 300ms;
           transition: all 300ms;
@@ -25,8 +25,8 @@ img.zoom-img {
   transform: translateZ(0);
 }
 .zoom-overlay {
-  z-index: 9999;
-  background: #fff;
+  z-index: 99990;
+  background: #000;
   position: fixed;
   top: 0;
   left: 0;
