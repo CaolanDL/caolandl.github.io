@@ -10,12 +10,27 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/zoom.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
     <script src="https://use.fontawesome.com/4c9066f1a6.js"></script>
   </head>
   <body>
+    <script>
+      try {
+        if (window.localStorage.getItem('cxstudio-theme') === 'light') {
+          document.body.classList.add('is-light-theme');
+        }
+      } catch (error) {}
+    </script>
     <header class="brand-bar">
-      <button class="brand-home" type="button" aria-label="Return to gallery">
-        <img src="assets/CSTUDIO.png" alt="{{ site.full_name }} logo" class="site-logo">
+      <button class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
+        <i class="fa-solid fa-circle-half-stroke theme-toggle__icon" aria-hidden="true"></i>
+      </button>
+      <button class="brand-home" type="button" aria-label="Switch to video gallery" aria-pressed="false">
+        <span class="site-logo-frame">
+          <img src="assets/CSTUDIO.png" alt="{{ site.full_name }} logo" class="site-logo site-logo--photo">
+          <img src="assets/CSTUDIO_LightMode.png" alt="" class="site-logo site-logo--photo-light" aria-hidden="true">
+          <img src="assets/CXSTUDIO_T_Gold.png" alt="" class="site-logo site-logo--video" aria-hidden="true">
+        </span>
       </button>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
         <span class="menu-toggle__bar"></span>
@@ -36,7 +51,9 @@
       <main id="content" class="content-shell">
         <section id="gallery-panel" class="content-panel is-active" data-panel="gallery" aria-label="Gallery" tabindex="-1">
           <nav id="gallery-filter" class="gallery-filter" aria-label="Gallery categories"></nav>
-          <div id="gallery"></div>
+          <div class="gallery-stage">
+            <div id="gallery"></div>
+          </div>
         </section>
 
         <section id="about-panel" class="content-panel info-panel" data-panel="about" aria-labelledby="about-title" tabindex="-1" hidden>
