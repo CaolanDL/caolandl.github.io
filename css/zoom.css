@@ -47,10 +47,16 @@ img.zoom-img {
        -o-transition:      opacity 300ms;
           transition:      opacity 300ms;
 }
+
+.is-light-theme .zoom-overlay {
+  background: rgba(255,255,255,0.82);
+}
+
 .zoom-overlay-open .zoom-overlay {
   filter: "alpha(opacity=100)";
   opacity: 1;
 }
+
 .zoom-overlay-open,
 .zoom-overlay-transitioning {
   cursor: default;

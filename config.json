@@ -69,50 +69,42 @@
     {
       "width": 683,
       "height": 1024,
-      "path": "./photos/200 Food/02 DSCF4439.jpg",
-      "compressed_path": "./photos/200 Food/02 DSCF4439.min.jpg",
+      "path": "./photos/200 Food/02 DSCF4759.jpg",
+      "compressed_path": "./photos/200 Food/02 DSCF4759.min.jpg",
       "compressed": false,
-      "placeholder_path": "./photos/200 Food/02 DSCF4439.placeholder.jpg"
-    },
-    {
-      "width": 800,
-      "height": 1000,
-      "path": "./photos/200 Food/03 DSCF4745.jpg",
-      "compressed_path": "./photos/200 Food/03 DSCF4745.min.jpg",
-      "compressed": false,
-      "placeholder_path": "./photos/200 Food/03 DSCF4745.placeholder.jpg"
-    },
-    {
-      "width": 667,
-      "height": 1000,
-      "path": "./photos/200 Food/04 P1687083.jpg",
-      "compressed_path": "./photos/200 Food/04 P1687083.min.jpg",
-      "compressed": false,
-      "placeholder_path": "./photos/200 Food/04 P1687083.placeholder.jpg"
-    },
-    {
-      "width": 683,
-      "height": 1024,
-      "path": "./photos/200 Food/05 DSCF4759.jpg",
-      "compressed_path": "./photos/200 Food/05 DSCF4759.min.jpg",
-      "compressed": false,
-      "placeholder_path": "./photos/200 Food/05 DSCF4759.placeholder.jpg"
+      "placeholder_path": "./photos/200 Food/02 DSCF4759.placeholder.jpg"
     },
     {
       "width": 819,
       "height": 1024,
-      "path": "./photos/200 Food/05.5 DSCF4388.jpg",
-      "compressed_path": "./photos/200 Food/05.5 DSCF4388.min.jpg",
+      "path": "./photos/200 Food/02.5DSCF4351.jpg",
+      "compressed_path": "./photos/200 Food/02.5DSCF4351.min.jpg",
       "compressed": false,
-      "placeholder_path": "./photos/200 Food/05.5 DSCF4388.placeholder.jpg"
+      "placeholder_path": "./photos/200 Food/02.5DSCF4351.placeholder.jpg"
+    },
+    {
+      "width": 683,
+      "height": 1024,
+      "path": "./photos/200 Food/03 DSCF4439.jpg",
+      "compressed_path": "./photos/200 Food/03 DSCF4439.min.jpg",
+      "compressed": false,
+      "placeholder_path": "./photos/200 Food/03 DSCF4439.placeholder.jpg"
     },
     {
       "width": 800,
       "height": 1000,
-      "path": "./photos/200 Food/06 DSCF4915.jpg",
-      "compressed_path": "./photos/200 Food/06 DSCF4915.min.jpg",
+      "path": "./photos/200 Food/05 DSCF4745.jpg",
+      "compressed_path": "./photos/200 Food/05 DSCF4745.min.jpg",
       "compressed": false,
-      "placeholder_path": "./photos/200 Food/06 DSCF4915.placeholder.jpg"
+      "placeholder_path": "./photos/200 Food/05 DSCF4745.placeholder.jpg"
+    },
+    {
+      "width": 819,
+      "height": 1024,
+      "path": "./photos/200 Food/06 DSCF4388.jpg",
+      "compressed_path": "./photos/200 Food/06 DSCF4388.min.jpg",
+      "compressed": false,
+      "placeholder_path": "./photos/200 Food/06 DSCF4388.placeholder.jpg"
     },
     {
       "width": 819,
@@ -123,12 +115,12 @@
       "placeholder_path": "./photos/200 Food/07 DSCF4938.placeholder.jpg"
     },
     {
-      "width": 819,
-      "height": 1024,
-      "path": "./photos/200 Food/DSCF4351.jpg",
-      "compressed_path": "./photos/200 Food/DSCF4351.min.jpg",
+      "width": 667,
+      "height": 1000,
+      "path": "./photos/200 Food/08 P1687083.jpg",
+      "compressed_path": "./photos/200 Food/08 P1687083.min.jpg",
       "compressed": false,
-      "placeholder_path": "./photos/200 Food/DSCF4351.placeholder.jpg"
+      "placeholder_path": "./photos/200 Food/08 P1687083.placeholder.jpg"
     },
     {
       "width": 683,

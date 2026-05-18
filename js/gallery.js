@@ -9,6 +9,7 @@ class Config {
     this.spacing = opts.spacing || 10;
     this.shuffle = opts.shuffle || false;
     this.columns = opts.columns || 2;
+    this.sectionOrder = opts.sectionOrder || null;
   };
 
   sections() {
@@ -17,11 +18,15 @@ class Config {
     }
 
     var sections = [];
-    for (var album in this.data) {
-      sections.push({
-        title: album,
-        photos: this.data[album].slice()
-      });
+    var albums = this.sectionOrder || Object.keys(this.data);
+    for (var i = 0; i < albums.length; i++) {
+      var album = albums[i];
+      if (this.data[album]) {
+        sections.push({
+          title: album,
+          photos: this.data[album].slice()
+        });
+      }
     }
     return sections;
   }

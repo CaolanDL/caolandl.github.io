@@ -1,5 +1,9 @@
 var id = 'gallery';
 var galleryConfig = null;
+var gallerySettings = {
+  disabledCategories: [],
+  categoryOrder: []
+};
 var currentPanel = 'gallery';
 var currentGalleryMode = 'photo';
 var currentGalleryCategory = null;
@@ -151,10 +155,157 @@ function renderVideoGallery(galleryRoot) {
   galleryRoot.appendChild(comingSoon);
 }
 
+function normalizeGallerySettings(settings) {
+  var disabledCategories = [];
+  var categoryOrder = [];
+
+  if (settings) {
+    disabledCategories = settings.disabled_categories || settings.disabledCategories || [];
+    categoryOrder = settings.category_order || settings.categoryOrder || [];
+  }
+
+  if (!Array.isArray(disabledCategories)) {
+    disabledCategories = [];
+  }
+
+  if (!Array.isArray(categoryOrder)) {
+    categoryOrder = [];
+  }
+
+  gallerySettings.disabledCategories = disabledCategories.map(function(category) {
+    return String(category).trim();
+  }).filter(function(category) {
+    return category.length > 0;
+  });
+
+  gallerySettings.categoryOrder = categoryOrder.map(function(category) {
+    return String(category).trim();
+  }).filter(function(category) {
+    return category.length > 0;
+  });
+}
+
+function isGalleryCategoryDisabled(category) {
+  var categoryName = String(category).trim();
+  var categoryLabel = galleryCategoryLabel(categoryName);
+
+  for (var i = 0; i < gallerySettings.disabledCategories.length; i++) {
+    if (
+      gallerySettings.disabledCategories[i] === categoryName ||
+      gallerySettings.disabledCategories[i] === categoryLabel
+    ) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+function filterGalleryData(data) {
+  if (Array.isArray(data)) {
+    return data;
+  }
+
+  var filteredData = {};
+  for (var category in data) {
+    if (!isGalleryCategoryDisabled(category)) {
+      filteredData[category] = data[category];
+    }
+  }
+  return filteredData;
+}
+
+function getConfiguredCategoryIndex(category) {
+  var categoryName = String(category).trim();
+  var categoryLabel = galleryCategoryLabel(categoryName);
+
+  for (var i = 0; i < gallerySettings.categoryOrder.length; i++) {
+    if (
+      gallerySettings.categoryOrder[i] === categoryName ||
+      gallerySettings.categoryOrder[i] === categoryLabel
+    ) {
+      return i;
+    }
+  }
+
+  return -1;
+}
+
+function sortGalleryData(data) {
+  if (Array.isArray(data) || !gallerySettings.categoryOrder.length) {
+    configuration.sectionOrder = null;
+    return data;
+  }
+
+  var categories = Object.keys(data);
+  categories.sort(function(a, b) {
+    var aIndex = getConfiguredCategoryIndex(a);
+    var bIndex = getConfiguredCategoryIndex(b);
+
+    if (aIndex === -1 && bIndex === -1) {
+      return a.localeCompare(b);
+    }
+
+    if (aIndex === -1) {
+      return 1;
+    }
+
+    if (bIndex === -1) {
+      return -1;
+    }
+
+    return aIndex - bIndex;
+  });
+
+  var sortedData = {};
+  configuration.sectionOrder = categories.slice();
+  for (var i = 0; i < categories.length; i++) {
+    sortedData[categories[i]] = data[categories[i]];
+  }
+  return sortedData;
+}
+
 function reqListener() {
-  galleryConfig = new Config(JSON.parse(this.responseText), configuration);
+  var galleryData = sortGalleryData(filterGalleryData(JSON.parse(this.responseText)));
+  if (currentGalleryCategory && isGalleryCategoryDisabled(currentGalleryCategory)) {
+    currentGalleryCategory = null;
+  }
+
+  galleryConfig = new Config(galleryData, configuration);
+  currentGalleryCategory = getGalleryCategoryFromHash() || currentGalleryCategory;
   buildGalleryFilter();
   renderGallery();
+}
+
+function loadGallerySettings(callback) {
+  var settingsReq = new XMLHttpRequest();
+
+  settingsReq.addEventListener('load', function() {
+    if (settingsReq.status >= 200 && settingsReq.status < 300) {
+      try {
+        normalizeGallerySettings(JSON.parse(settingsReq.responseText));
+      } catch (error) {
+        normalizeGallerySettings({});
+      }
+    }
+
+    callback();
+  });
+
+  settingsReq.addEventListener('error', function() {
+    normalizeGallerySettings({});
+    callback();
+  });
+
+  settingsReq.open("GET", "gallery-settings.json");
+  settingsReq.send();
+}
+
+function loadGalleryConfig() {
+  var oReq = new XMLHttpRequest();
+  oReq.addEventListener("load", reqListener);
+  oReq.open("GET", "config.json");
+  oReq.send();
 }
 
 function getActiveGalleryConfig() {
@@ -180,6 +331,38 @@ function getActiveGalleryConfig() {
 
 function galleryCategoryLabel(category) {
   return category.replace(/^\d+\s*/, '').replace(/^\s*-\s*/, '').trim();
+}
+
+function galleryCategorySlug(category) {
+  return galleryCategoryLabel(category)
+    .toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+function getGalleryCategoryUrl(category) {
+  return '#' + galleryCategorySlug(category);
+}
+
+function getGalleryCategoryFromHash() {
+  if (!galleryConfig) {
+    return null;
+  }
+
+  var hash = window.location.hash.replace('#', '').toLowerCase();
+  if (!hash || hash === 'about' || hash === 'contact' || hash === 'video') {
+    return null;
+  }
+
+  var sections = galleryConfig.sections();
+  for (var i = 0; i < sections.length; i++) {
+    if (galleryCategorySlug(sections[i].title) === hash) {
+      return sections[i].title;
+    }
+  }
+
+  return null;
 }
 
 function setActiveGalleryFilter() {
@@ -219,8 +402,12 @@ function setGalleryFilterVisibilityForMode() {
 }
 
 function getGalleryModeUrl(mode) {
-  return mode === 'video'
-    ? '#video'
+  if (mode === 'video') {
+    return '#video';
+  }
+
+  return currentGalleryCategory
+    ? getGalleryCategoryUrl(currentGalleryCategory)
     : window.location.pathname + window.location.search;
 }
 
@@ -279,32 +466,51 @@ function switchGalleryMode(mode, options) {
     setGalleryFilterVisibilityForMode();
     galleryRoot.classList.remove('is-mode-flipping-out');
     renderGallery();
-    if (galleryPanel) {
-      galleryPanel.style.minHeight = '';
-    }
-    galleryRoot.style.minHeight = '';
     galleryRoot.classList.add('is-mode-flipping-in');
 
     galleryTransitionCleanupTimer = window.setTimeout(function() {
+      if (galleryPanel) {
+        galleryPanel.style.minHeight = '';
+      }
       galleryRoot.classList.remove('is-mode-flipping-in');
       galleryRoot.classList.remove('is-flipping-to-video');
       galleryRoot.classList.remove('is-flipping-to-photo');
+      galleryRoot.style.minHeight = '';
       document.body.classList.remove('is-gallery-mode-switching');
     }, 155);
   }, 155);
 }
 
-function switchGalleryCategory(category) {
+function switchGalleryCategory(category, options) {
+  var opts = options || {};
+
   if (currentGalleryMode === 'video') {
     currentGalleryCategory = category;
     setActiveGalleryFilter();
     switchGalleryMode('photo', {
-      updateHistory: true
+      updateHistory: false
     });
+    if (opts.updateHistory !== false) {
+      history.pushState({
+        panel: 'gallery',
+        galleryMode: 'photo',
+        galleryCategory: category
+      }, '', getGalleryCategoryUrl(category));
+    }
     return;
   }
 
   if (category === currentGalleryCategory) {
+    if (
+      opts.updateHistory !== false &&
+      window.location.hash.replace('#', '').toLowerCase() !== galleryCategorySlug(category)
+    ) {
+      history.pushState({
+        panel: 'gallery',
+        galleryMode: 'photo',
+        galleryCategory: category
+      }, '', getGalleryCategoryUrl(category));
+    }
     return;
   }
 
@@ -313,6 +519,13 @@ function switchGalleryCategory(category) {
 
   currentGalleryCategory = category;
   setActiveGalleryFilter();
+  if (opts.updateHistory !== false) {
+    history.pushState({
+      panel: 'gallery',
+      galleryMode: 'photo',
+      galleryCategory: category
+    }, '', getGalleryCategoryUrl(category));
+  }
 
   if (!galleryRoot || prefersReducedMotion) {
     renderGallery();
@@ -417,6 +630,8 @@ function setActiveNav(panelName) {
 
 function setActivePanelState(panelName) {
   document.body.classList.toggle('is-gallery-view', panelName === 'gallery');
+  document.body.classList.toggle('is-about-view', panelName === 'about');
+  document.body.classList.toggle('is-contact-view', panelName === 'contact');
 }
 
 function closeMobileMenu() {
@@ -538,9 +753,22 @@ function initNavigation() {
   window.addEventListener('popstate', function() {
     var nextPanel = getPanelFromHash();
     var nextGalleryMode = getGalleryModeFromHash();
+    var nextGalleryCategory = getGalleryCategoryFromHash();
 
     if (nextPanel === 'gallery' && nextGalleryMode !== currentGalleryMode) {
+      if (nextGalleryMode === 'photo' && nextGalleryCategory) {
+        currentGalleryCategory = nextGalleryCategory;
+      }
       switchGalleryMode(nextGalleryMode, {
+        updateHistory: false
+      });
+    } else if (
+      nextPanel === 'gallery' &&
+      nextGalleryMode === 'photo' &&
+      nextGalleryCategory &&
+      nextGalleryCategory !== currentGalleryCategory
+    ) {
+      switchGalleryCategory(nextGalleryCategory, {
         updateHistory: false
       });
     }
@@ -560,10 +788,7 @@ function initNavigation() {
 }
 
 window.addEventListener('load', function() {
-  var oReq = new XMLHttpRequest();
-  oReq.addEventListener("load", reqListener);
-  oReq.open("GET", "config.json");
-  oReq.send();
+  loadGallerySettings(loadGalleryConfig);
 
   var igElem = document.getElementById('instagram');
   if (igElem && igElem.href === 'https://www.instagram.com/') {

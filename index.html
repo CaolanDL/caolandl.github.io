@@ -57,36 +57,51 @@
         </section>
 
         <section id="about-panel" class="content-panel info-panel" data-panel="about" aria-labelledby="about-title" tabindex="-1" hidden>
-          <div class="info-card about-card">
-            <div class="about-hero">
-              <img src="assets/CX-Icon.png" alt="{{ site.full_name }} icon" class="about-icon">
-              <div class="about-heading">
-                <p class="info-kicker">Visual production studio</p>
-                <h1 id="about-title">About</h1>
+          <div class="about-content">
+            <div class="info-card about-card">
+              <div class="about-hero">
+                <img src="assets/CX-Icon.png" alt="{{ site.full_name }} icon" class="about-icon">
+                <div class="about-heading">
+                  <p class="info-kicker">Visual production studio</p>
+                  <h1 id="about-title">About</h1>
+                </div>
+              </div>
+              <div class="about-body">
+                <p>
+                  CXSTUDIO specializes in creating stylish visual content for businesses and individuals.
+                </p>
+                <p>
+                  Whether you are looking to upgrade your brand imagery, commission a personal project, or capture a special moment, we offer a tailored service to meet your needs.
+                </p>
+              </div>
+              <div class="about-details" aria-label="Studio details">
+                <div>
+                  <span>Approach</span>
+                  <strong>Tailored to your brand</strong>
+                </div>
+                <div>
+                  <span>Services</span>
+                  <strong>Photo / Video</strong>
+                </div>
+                <div>
+                  <span>Availability</span>
+                  <strong>Mon-Fri | 9:00 - 24:00<br>Sat-Sun | 19:00 - 23:00</strong>
+                </div>
               </div>
             </div>
-            <div class="about-body">
-              <p>
-                CXSTUDIO specializes in portraiture, pets and food photography.
-              </p>
-              <p>
-                Expanding 2026 into events and live music videography.
-              </p>
-            </div>
-            <div class="about-details" aria-label="Studio details">
-              <div>
-                <span>Approach</span>
-                <strong>Tailored to your brand</strong>
-              </div>
-              <div>
-                <span>Services</span>
-                <strong>Photo / Video</strong>
-              </div>
-              <div>
-                <span>Availability</span>
-                <strong>Mon-Fri | 9:00 - 24:00<br>Sat-Sun | 19:00 - 23:00</strong>
-              </div>
-            </div>
+            <a id="instagram" class="instagram-callout" href="https://www.instagram.com/{{ site.instagram }}" target="_blank" rel="noopener">
+              <span class="instagram-callout__icon">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </span>
+              <span class="instagram-callout__text">
+                <span class="instagram-callout__label">Follow the work</span>
+                <span class="instagram-callout__handle">@{{ site.instagram }}</span>
+              </span>
+              <span class="instagram-callout__arrow">
+                <i class="fa fa-external-link" aria-hidden="true"></i>
+              </span>
+            </a>
+            <button class="about-contact-button" type="button" data-nav-target="contact">Contact us</button>
           </div>
           <a class="location-chip" href="https://www.google.com/maps/search/?api=1&query=Colchester%2C%20Essex%2C%20UK" target="_blank" rel="noopener">
             <i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -98,10 +113,7 @@
           <div class="info-card contact-card">
           <div class="info-copy contact-copy">
             <p class="info-kicker">Bookings &amp; enquiries</p>
-            <h1 id="contact-title">Contact</h1>
-            <p class="contact-intro">
-              For shoots, commissions, availability, and print enquiries.
-            </p>
+            <h1 id="contact-title">Contact Us</h1>
           </div>
 
           <div class="contacts-bar" aria-label="Contact methods">
@@ -124,18 +136,6 @@
               </span>
             </a>
           </div>
-          <a id="instagram" class="instagram-callout" href="https://www.instagram.com/{{ site.instagram }}">
-            <span class="instagram-callout__icon">
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-            </span>
-            <span class="instagram-callout__text">
-              <span class="instagram-callout__label">Follow the work</span>
-              <span class="instagram-callout__handle">@{{ site.instagram }}</span>
-            </span>
-            <span class="instagram-callout__arrow">
-              <i class="fa fa-external-link" aria-hidden="true"></i>
-            </span>
-          </a>
           </div>
         </section>
       </main>
