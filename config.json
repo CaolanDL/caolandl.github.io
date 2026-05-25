@@ -215,12 +215,12 @@
   ],
   "400 Product": [
     {
-      "width": 1600,
+      "width": 1614,
       "height": 2000,
-      "path": "./photos/400 Product/artstudio-paint-prodshot2_1.jpg",
-      "compressed_path": "./photos/400 Product/artstudio-paint-prodshot2_1.min.jpg",
+      "path": "./photos/400 Product/artstudio-paint-prodshot3.jpg",
+      "compressed_path": "./photos/400 Product/artstudio-paint-prodshot3.min.jpg",
       "compressed": false,
-      "placeholder_path": "./photos/400 Product/artstudio-paint-prodshot2_1.placeholder.jpg"
+      "placeholder_path": "./photos/400 Product/artstudio-paint-prodshot3.placeholder.jpg"
     },
     {
       "width": 576,
