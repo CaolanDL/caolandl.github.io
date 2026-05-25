@@ -175,6 +175,14 @@
   ],
   "400 Product": [
     {
+      "width": 1600,
+      "height": 2000,
+      "path": "./photos/400 Product/artstudio-paint-prodshot2_1.jpg",
+      "compressed_path": "./photos/400 Product/artstudio-paint-prodshot2_1.min.jpg",
+      "compressed": false,
+      "placeholder_path": "./photos/400 Product/artstudio-paint-prodshot2_1.placeholder.jpg"
+    },
+    {
       "width": 576,
       "height": 1024,
       "path": "./photos/400 Product/Home Studio Practice00149_1.jpg",
@@ -189,14 +197,6 @@
       "compressed_path": "./photos/400 Product/Home Studio Practice00247_1.min.jpg",
       "compressed": false,
       "placeholder_path": "./photos/400 Product/Home Studio Practice00247_1.placeholder.jpg"
-    },
-    {
-      "width": 800,
-      "height": 1000,
-      "path": "./photos/400 Product/P1687882.jpg",
-      "compressed_path": "./photos/400 Product/P1687882.min.jpg",
-      "compressed": false,
-      "placeholder_path": "./photos/400 Product/P1687882.placeholder.jpg"
     }
   ],
   "500 Other": [
