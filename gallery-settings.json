@@ -1,4 +1,4 @@
 {
-  "disabled_categories": ["Pets", "Other"],
-  "category_order": ["Food", "Portraits", "Pets", "Product", "Other"]
+  "disabled_categories": ["Other"],
+  "category_order": ["Food", "Product", "Portraits", "Pets", "Other"]
 }
